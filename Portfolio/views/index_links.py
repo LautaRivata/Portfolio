@@ -10,15 +10,6 @@ from Portfolio.styles.styles import Size
 
 def index_links() -> rx.Component:
     return rx.vstack(
-        title("Desarrollo Profesional"),
-        link_button(
-            "Proyectos Principales",
-            "Ver proyectos más relevantes realizados y en desarrollo",
-            "/icons/code.svg",
-            Route.PROYECTS.value,
-            False,
-            True
-        ),
         link_button(
             "Github",
             "Conoce mis Repositorios",
@@ -30,15 +21,6 @@ def index_links() -> rx.Component:
             "Mi experiencia en el Ámbito Laboral",
             "/icons/linkedin.svg",
             const.LINKEDIN_URL
-        ),
-        action_button(
-            "Ver CV",
-            "Aquí puedes descaargar mi Curriculum Vitae",
-            "/icons/file-regular.svg",
-            action=rx.download(
-                url="/2024 - Lautaro Rivata ING Biomedico.pdf",
-                filename="Lautaro Rivata FullStack.pdf",
-            ),
         ),
         width="100%",
         spacing=Size.DEFAULT.value,

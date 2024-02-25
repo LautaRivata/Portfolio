@@ -6,13 +6,13 @@ from Portfolio.styles.colors import Color, TextColor
 from Portfolio.components.link_icon import link_icon
 
 
-def header() -> rx.Component:
+def header(size: str) -> rx.Component:
     return rx.box(
         rx.hstack(
             rx.avatar(
                 name="By Tupak",
-                size="xl",
-                src="/avatar.jpg",
+                size=size,
+                src="/me.jpg",
                 color=TextColor.BODY.value,
                 bg=Color.CONTENT.value,
                 padding="2px",

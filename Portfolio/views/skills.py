@@ -1,7 +1,5 @@
 import reflex as rx
-import Portfolio.constants as const
-from Portfolio.styles.styles import Size, Font
-from Portfolio.styles.colors import Color, TextColor
+from Portfolio.styles.styles import button_type_style
 from Portfolio.components.skill_icon import skill_icon
 
 
@@ -23,16 +21,15 @@ def skills() -> rx.Component:
         ),
         rx.grid_item(
             skill_icon("Visual Studio",
-                       "/icons/Skills/VisualStudio.svg", "Icono VisualStudio"),
+                       "/icons/vscode-alt.svg", "Icono VisualStudio"),
             skill_icon("MySQL", "/icons/Skills/MySQL.svg", "Icono MySQL"),
-            skill_icon("Github", "/icons/Skills/Github.svg", "Icono Github"),
+            skill_icon("Github", "/icons/github.svg", "Icono Github"),
             row_span=3,
             col_span=1,
         ),
         template_rows="repeat(3, 1fr)",
         template_columns="repeat(3, 1fr)",
-        width="100%",
-        gap="1em",
+        style=button_type_style,
         justify_content="center",
         justify_items="center",
     )

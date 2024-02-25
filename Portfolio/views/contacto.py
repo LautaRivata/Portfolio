@@ -2,7 +2,10 @@ import reflex as rx
 import Portfolio.constants as const
 from Portfolio.components.action_button import action_button
 from Portfolio.components.link_button import link_button
-from Portfolio.components.title import title
+
+
+def funk():
+    rx.window_alert("Copiado...")
 
 
 def contacto() -> rx.Component:
@@ -17,7 +20,7 @@ def contacto() -> rx.Component:
             "Copiar Email",
             "Click aqui para copiar email al portapapeles",
             "/icons/clipboard-check-regular.svg",
-            action=rx.set_clipboard("lautarivata@gmail.com"),
+            action=rx.set_clipboard(f"{const.EMAIL}"),
         ),
         width="100%"
     )
