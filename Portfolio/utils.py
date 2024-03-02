@@ -7,7 +7,7 @@ def lang() -> rx.Component:
     return rx.script("document.documentElement.lang='es'")
 
 
-preview = "https://moure.dev/preview.jpg"  # CAMBIAR ESTA PREVIEW
+preview = "https://bytupakportfolio.reflex.run/PrewiewPortfolio.jpg"
 
 _meta = [
     {"name": "og:type", "content": "website"},
