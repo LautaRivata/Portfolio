@@ -8,6 +8,7 @@ config = rx.Config(
     app_name="Portfolio",
     cors_allowed_origins=[
         "https://bytupakportfolio.vercel.app/",
-        "https://localhost:3000"]
+        "http://localhost:3000",
+    ]
     # api_url="https://bytupakportfolio.up.railway.app/"
 )

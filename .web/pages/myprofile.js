@@ -13,25 +13,26 @@ import NextHead from "next/head"
 
 
 
-export function Button_d9a148b9003951da4c64fd12b08ac0a4 () {
-  const [addEvents, connectError] = useContext(EventLoopContext);
+export function Modal_864d3dffb300c6c74fd6f8cc65cd9965 () {
+  const state__modaltitulo = useContext(StateContexts.state__modaltitulo)
 
-  const on_click_01041feec2186d2f1866cdc3bc5e9caf = useCallback((_e) => addEvents([Event("_download", {url:`/2024 - Lautaro Rivata FullStack.pdf`,filename:`Lautaro Rivata FullStack.pdf`})], (_e), {}), [addEvents, Event])
 
   return (
-    <Button onClick={on_click_01041feec2186d2f1866cdc3bc5e9caf} sx={{"width": "100%", "borderColor": null, "borderWidth": null, "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "_hover": {"backgroundColor": "#D9525E"}}}>
-  <HStack sx={{"width": "100%"}}>
-  <ChakraImage alt={`Ver CV`} src={`/icons/file-regular.svg`} sx={{"width": "1.5em", "height": "1.5em", "margin": "0.8em"}}/>
-  <VStack alignItems={`start`} spacing={`0.5em`} sx={{"paddingY": "0.5em", "paddingRight": "0.5em"}}>
-  <Text sx={{"fontFamily": "Ubuntu", "fontWeight": "500", "fontSize": "1em", "color": "#F2F2F2"}}>
-  {`Ver CV`}
-</Text>
-  <Text sx={{"fontWeight": "300", "fontSize": "0.8em", "color": "#A6A6A6", "fontFamily": "Ubuntu"}}>
-  {`Aquí puedes descargar mi Curriculum Vitae`}
-</Text>
-</VStack>
-</HStack>
-</Button>
+    <Modal isOpen={state__modaltitulo.show}>
+  <ModalOverlay>
+  <ModalContent>
+  <ModalHeader>
+  {`Ingeniero Biomedico`}
+</ModalHeader>
+  <ModalBody>
+  <ChakraImage src={`/CertificadoIngBio.jpg`}/>
+</ModalBody>
+  <ModalFooter>
+  <Button_2c95cf2a2250d41ea8d37af487161d52/>
+</ModalFooter>
+</ModalContent>
+</ModalOverlay>
+</Modal>
   )
 }
 
@@ -80,13 +81,13 @@ export function Button_01fb78f77a69d5c31c1f21bf72cae281 () {
   )
 }
 
-export function Button_e2c97b4f76755d5db6e271346b601e57 () {
+export function Button_2c95cf2a2250d41ea8d37af487161d52 () {
   const [addEvents, connectError] = useContext(EventLoopContext);
 
-  const on_click_534692acb4488c609bde3de0659d561f = useCallback((_e) => addEvents([Event("state.modal_diplo.change", {})], (_e), {}), [addEvents, Event])
+  const on_click_021d85cea0cb5d0410a6a559cef3c699 = useCallback((_e) => addEvents([Event("state.modaltitulo.change", {})], (_e), {}), [addEvents, Event])
 
   return (
-    <Button onClick={on_click_534692acb4488c609bde3de0659d561f} sx={{"width": "100%", "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "_hover": {"backgroundColor": "#D9525E"}}}>
+    <Button onClick={on_click_021d85cea0cb5d0410a6a559cef3c699} sx={{"width": "100%", "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "_hover": {"backgroundColor": "#D9525E"}}}>
   {`Cerar`}
 </Button>
   )
@@ -114,38 +115,37 @@ export function Button_3ff1528eaade23fca6fd4ca9952484d1 () {
   )
 }
 
-export function Button_2c95cf2a2250d41ea8d37af487161d52 () {
+export function Button_d9a148b9003951da4c64fd12b08ac0a4 () {
   const [addEvents, connectError] = useContext(EventLoopContext);
 
-  const on_click_021d85cea0cb5d0410a6a559cef3c699 = useCallback((_e) => addEvents([Event("state.modaltitulo.change", {})], (_e), {}), [addEvents, Event])
+  const on_click_01041feec2186d2f1866cdc3bc5e9caf = useCallback((_e) => addEvents([Event("_download", {url:`/2024 - Lautaro Rivata FullStack.pdf`,filename:`Lautaro Rivata FullStack.pdf`})], (_e), {}), [addEvents, Event])
 
   return (
-    <Button onClick={on_click_021d85cea0cb5d0410a6a559cef3c699} sx={{"width": "100%", "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "_hover": {"backgroundColor": "#D9525E"}}}>
-  {`Cerar`}
+    <Button onClick={on_click_01041feec2186d2f1866cdc3bc5e9caf} sx={{"width": "100%", "borderColor": null, "borderWidth": null, "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "_hover": {"backgroundColor": "#D9525E"}}}>
+  <HStack sx={{"width": "100%"}}>
+  <ChakraImage alt={`Ver CV`} src={`/icons/file-regular.svg`} sx={{"width": "1.5em", "height": "1.5em", "margin": "0.8em"}}/>
+  <VStack alignItems={`start`} spacing={`0.5em`} sx={{"paddingY": "0.5em", "paddingRight": "0.5em"}}>
+  <Text sx={{"fontFamily": "Ubuntu", "fontWeight": "500", "fontSize": "1em", "color": "#F2F2F2"}}>
+  {`Ver CV`}
+</Text>
+  <Text sx={{"fontWeight": "300", "fontSize": "0.8em", "color": "#A6A6A6", "fontFamily": "Ubuntu"}}>
+  {`Aquí puedes descargar mi Curriculum Vitae`}
+</Text>
+</VStack>
+</HStack>
 </Button>
   )
 }
 
-export function Modal_864d3dffb300c6c74fd6f8cc65cd9965 () {
-  const state__modaltitulo = useContext(StateContexts.state__modaltitulo)
+export function Button_e2c97b4f76755d5db6e271346b601e57 () {
+  const [addEvents, connectError] = useContext(EventLoopContext);
 
+  const on_click_534692acb4488c609bde3de0659d561f = useCallback((_e) => addEvents([Event("state.modal_diplo.change", {})], (_e), {}), [addEvents, Event])
 
   return (
-    <Modal isOpen={state__modaltitulo.show}>
-  <ModalOverlay>
-  <ModalContent>
-  <ModalHeader>
-  {`Ingeniero Biomedico`}
-</ModalHeader>
-  <ModalBody>
-  <ChakraImage src={`/CertificadoIngBio.jpg`}/>
-</ModalBody>
-  <ModalFooter>
-  <Button_2c95cf2a2250d41ea8d37af487161d52/>
-</ModalFooter>
-</ModalContent>
-</ModalOverlay>
-</Modal>
+    <Button onClick={on_click_534692acb4488c609bde3de0659d561f} sx={{"width": "100%", "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "_hover": {"backgroundColor": "#D9525E"}}}>
+  {`Cerar`}
+</Button>
   )
 }
 

@@ -14,7 +14,21 @@ import NextHead from "next/head"
 
 
 
-export function Hstack_3dfd61bf66e81837d945c8dd0bad8b39 () {
+export function Hstack_a3aa2b5abf5a1eca4293446f4d2427e4 () {
+
+
+  return (
+    <HStack sx={{"alignSelf": "end"}}>
+  {["Python", "Django", "MySQL"].map((l, index_29003ef2a0dcf3ec76abc634908259b7) => (
+  <Badge key={index_29003ef2a0dcf3ec76abc634908259b7} sx={{"bg": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
+  {l}
+</Badge>
+))}
+</HStack>
+  )
+}
+
+export function Hstack_db55a9b3353d777c5cabef2ce2b285f7 () {
 
 
   return (
@@ -28,26 +42,12 @@ export function Hstack_3dfd61bf66e81837d945c8dd0bad8b39 () {
   )
 }
 
-export function Hstack_9bbc812d7980400d59deafbe8d708f33 () {
+export function Hstack_3332833b8259f6423650ff2059ccd550 () {
 
 
   return (
     <HStack sx={{"alignSelf": "end"}}>
   {["Javascript", "React", "MySQL"].map((l, index_29003ef2a0dcf3ec76abc634908259b7) => (
-  <Badge key={index_29003ef2a0dcf3ec76abc634908259b7} sx={{"bg": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
-  {l}
-</Badge>
-))}
-</HStack>
-  )
-}
-
-export function Hstack_dc9e2c8c6677783a26ef35d7eb709804 () {
-
-
-  return (
-    <HStack sx={{"alignSelf": "end"}}>
-  {["Python", "Django", "MySQL"].map((l, index_29003ef2a0dcf3ec76abc634908259b7) => (
   <Badge key={index_29003ef2a0dcf3ec76abc634908259b7} sx={{"bg": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
   {l}
 </Badge>
@@ -197,7 +197,7 @@ export default function Component() {
                 `}
 </Text>
   <ChakraImage alt={`Imagen de Home del Proyecto Esterimed`} src={`/ProyectEsterimed/HomeEditado.png`} sx={{"height": "15em", "aspectRatio": "16 / 9", "alignSelf": "center"}}/>
-  <Hstack_dc9e2c8c6677783a26ef35d7eb709804/>
+  <Hstack_a3aa2b5abf5a1eca4293446f4d2427e4/>
 </VStack>
   <VStack alignItems={`start`} spacing={`1em`} sx={{"width": "100%", "borderRadius": "1em", "backgroundColor": "#212123", "paddingX": "0.5em", "paddingY": "0.5em"}}>
   <HStack>
@@ -213,7 +213,7 @@ export default function Component() {
                 `}
 </Text>
   <ChakraImage alt={`Imagen de Home del Proyecto Ecomerse`} src={`/ProyectEcomerse/Index.jpg`} sx={{"height": "15em", "aspectRatio": "16 / 9", "alignSelf": "center"}}/>
-  <Hstack_9bbc812d7980400d59deafbe8d708f33/>
+  <Hstack_3332833b8259f6423650ff2059ccd550/>
 </VStack>
   <VStack alignItems={`start`} spacing={`1em`} sx={{"width": "100%", "borderRadius": "1em", "backgroundColor": "#212123", "paddingX": "0.5em", "paddingY": "0.5em"}}>
   <HStack>
@@ -228,7 +228,7 @@ export default function Component() {
                 `}
 </Text>
   <ChakraImage alt={`Imagen de Home del Proyecto Links`} src={`/ProyectLinks/Home.png`} sx={{"height": "15em", "aspectRatio": "16 / 9", "alignSelf": "center"}}/>
-  <Hstack_3dfd61bf66e81837d945c8dd0bad8b39/>
+  <Hstack_db55a9b3353d777c5cabef2ce2b285f7/>
 </VStack>
 </VStack>
 </VStack>
