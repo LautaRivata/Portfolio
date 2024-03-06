@@ -14,7 +14,7 @@ import NextHead from "next/head"
 
 
 
-export function Hstack_ab4b3ba3665d7937e16627dc9b6fb2df () {
+export function Hstack_3dfd61bf66e81837d945c8dd0bad8b39 () {
 
 
   return (
@@ -28,12 +28,12 @@ export function Hstack_ab4b3ba3665d7937e16627dc9b6fb2df () {
   )
 }
 
-export function Hstack_a7f4498d81af605d25e41d9588be8773 () {
+export function Hstack_9bbc812d7980400d59deafbe8d708f33 () {
 
 
   return (
     <HStack sx={{"alignSelf": "end"}}>
-  {["Python", "Django", "MySQL"].map((l, index_29003ef2a0dcf3ec76abc634908259b7) => (
+  {["Javascript", "React", "MySQL"].map((l, index_29003ef2a0dcf3ec76abc634908259b7) => (
   <Badge key={index_29003ef2a0dcf3ec76abc634908259b7} sx={{"bg": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
   {l}
 </Badge>
@@ -42,12 +42,12 @@ export function Hstack_a7f4498d81af605d25e41d9588be8773 () {
   )
 }
 
-export function Hstack_17508300a51ca1aa8f5f220c7e11dec1 () {
+export function Hstack_dc9e2c8c6677783a26ef35d7eb709804 () {
 
 
   return (
     <HStack sx={{"alignSelf": "end"}}>
-  {["Javascript", "React", "MySQL"].map((l, index_29003ef2a0dcf3ec76abc634908259b7) => (
+  {["Python", "Django", "MySQL"].map((l, index_29003ef2a0dcf3ec76abc634908259b7) => (
   <Badge key={index_29003ef2a0dcf3ec76abc634908259b7} sx={{"bg": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
   {l}
 </Badge>
@@ -197,7 +197,7 @@ export default function Component() {
                 `}
 </Text>
   <ChakraImage alt={`Imagen de Home del Proyecto Esterimed`} src={`/ProyectEsterimed/HomeEditado.png`} sx={{"height": "15em", "aspectRatio": "16 / 9", "alignSelf": "center"}}/>
-  <Hstack_a7f4498d81af605d25e41d9588be8773/>
+  <Hstack_dc9e2c8c6677783a26ef35d7eb709804/>
 </VStack>
   <VStack alignItems={`start`} spacing={`1em`} sx={{"width": "100%", "borderRadius": "1em", "backgroundColor": "#212123", "paddingX": "0.5em", "paddingY": "0.5em"}}>
   <HStack>
@@ -213,7 +213,7 @@ export default function Component() {
                 `}
 </Text>
   <ChakraImage alt={`Imagen de Home del Proyecto Ecomerse`} src={`/ProyectEcomerse/Index.jpg`} sx={{"height": "15em", "aspectRatio": "16 / 9", "alignSelf": "center"}}/>
-  <Hstack_17508300a51ca1aa8f5f220c7e11dec1/>
+  <Hstack_9bbc812d7980400d59deafbe8d708f33/>
 </VStack>
   <VStack alignItems={`start`} spacing={`1em`} sx={{"width": "100%", "borderRadius": "1em", "backgroundColor": "#212123", "paddingX": "0.5em", "paddingY": "0.5em"}}>
   <HStack>
@@ -228,7 +228,7 @@ export default function Component() {
                 `}
 </Text>
   <ChakraImage alt={`Imagen de Home del Proyecto Links`} src={`/ProyectLinks/Home.png`} sx={{"height": "15em", "aspectRatio": "16 / 9", "alignSelf": "center"}}/>
-  <Hstack_ab4b3ba3665d7937e16627dc9b6fb2df/>
+  <Hstack_3dfd61bf66e81837d945c8dd0bad8b39/>
 </VStack>
 </VStack>
 </VStack>
