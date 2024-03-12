@@ -17,35 +17,19 @@ import NextHead from "next/head"
 
 
 
-export function Fragment_e9a05c105aa9215aeba52aeec8fe2e76 () {
-  const state = useContext(StateContexts.state)
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
+export function Flex_553de15d7a928c08f6612c4302064851 () {
 
 
   return (
-    <Fragment>
-  {isTrue(((!state.is_hydrated) || (connectErrors.length > 0))) ? (
-  <Fragment>
-  <LucideWifiOffIcon css={{"color": "crimson", "zIndex": 9999, "position": "fixed", "bottom": "30px", "right": "30px", "animation": `${pulse} 1s infinite`}} size={32}>
-  {`wifi_off`}
-</LucideWifiOffIcon>
-</Fragment>
-) : (
-  <Fragment/>
-)}
-</Fragment>
+    <RadixThemesFlex align={`start`} css={{"alignSelf": "end"}} direction={`row`} gap={`2`}>
+  {["Python", "Django", "MySQL"].map((l, index_92a1e5619c8327442a4ab5cc45a216b7) => (
+  <Badge key={index_92a1e5619c8327442a4ab5cc45a216b7} sx={{"background": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
+  {l}
+</Badge>
+))}
+</RadixThemesFlex>
   )
 }
-
-const pulse = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`
-
 
 export function Fragment_ac0b06893fc1b15016f3e0532508036d () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
@@ -76,17 +60,23 @@ export function Fragment_ac0b06893fc1b15016f3e0532508036d () {
   )
 }
 
-export function Flex_138bf767bf667dfbeb691e141ce503fe () {
+export function Fragment_e9a05c105aa9215aeba52aeec8fe2e76 () {
+  const state = useContext(StateContexts.state)
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
 
 
   return (
-    <RadixThemesFlex align={`start`} css={{"alignSelf": "end"}} direction={`row`} gap={`2`}>
-  {["Python", "Django", "MySQL"].map((l, index_92a1e5619c8327442a4ab5cc45a216b7) => (
-  <Badge key={index_92a1e5619c8327442a4ab5cc45a216b7} sx={{"background": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
-  {l}
-</Badge>
-))}
-</RadixThemesFlex>
+    <Fragment>
+  {isTrue(((!state.is_hydrated) || (connectErrors.length > 0))) ? (
+  <Fragment>
+  <LucideWifiOffIcon css={{"color": "crimson", "zIndex": 9999, "position": "fixed", "bottom": "30px", "right": "30px", "animation": `${pulse} 1s infinite`}} size={32}>
+  {`wifi_off`}
+</LucideWifiOffIcon>
+</Fragment>
+) : (
+  <Fragment/>
+)}
+</Fragment>
   )
 }
 
@@ -102,26 +92,24 @@ export function Link_41bb85c5c5d29ae924ff55304f21433d () {
   )
 }
 
-export function Flex_a1fc7e1fe923b54827b6e8d802468788 () {
+export function Link_10dba02501660ad418a7a217109dd7a2 () {
+
+
+  return (
+    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
+  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/email.svg`}/>
+</NextLink>
+</RadixThemesLink>
+  )
+}
+
+export function Flex_98cf0381d7857d569c427b65155ef4f4 () {
 
 
   return (
     <RadixThemesFlex align={`start`} css={{"alignSelf": "end"}} direction={`row`} gap={`2`}>
   {["Javascript", "React", "MySQL"].map((l, index_92a1e5619c8327442a4ab5cc45a216b7) => (
-  <Badge key={index_92a1e5619c8327442a4ab5cc45a216b7} sx={{"background": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
-  {l}
-</Badge>
-))}
-</RadixThemesFlex>
-  )
-}
-
-export function Flex_4b0734687e9bc11324d3d4e490d18f88 () {
-
-
-  return (
-    <RadixThemesFlex align={`start`} css={{"alignSelf": "end"}} direction={`row`} gap={`2`}>
-  {["Python", "Reflex"].map((l, index_92a1e5619c8327442a4ab5cc45a216b7) => (
   <Badge key={index_92a1e5619c8327442a4ab5cc45a216b7} sx={{"background": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
   {l}
 </Badge>
@@ -142,15 +130,27 @@ export function Link_85f35b1e68e1b53b9165da2d4888fa13 () {
   )
 }
 
-export function Link_10dba02501660ad418a7a217109dd7a2 () {
+const pulse = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
+
+
+export function Flex_8b526a18776dcd9f8f91183131301722 () {
 
 
   return (
-    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
-  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/email.svg`}/>
-</NextLink>
-</RadixThemesLink>
+    <RadixThemesFlex align={`start`} css={{"alignSelf": "end"}} direction={`row`} gap={`2`}>
+  {["Python", "Reflex"].map((l, index_92a1e5619c8327442a4ab5cc45a216b7) => (
+  <Badge key={index_92a1e5619c8327442a4ab5cc45a216b7} sx={{"background": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
+  {l}
+</Badge>
+))}
+</RadixThemesFlex>
   )
 }
 
@@ -296,7 +296,7 @@ export default function Component() {
                 `}
 </RadixThemesText>
   <img alt={`Imagen de Home del Proyecto Esterimed`} css={{"height": "15em", "aspectRatio": "16 / 9", "alignSelf": "center"}} src={`/ProyectEsterimed/HomeEditado.png`}/>
-  <Flex_138bf767bf667dfbeb691e141ce503fe/>
+  <Flex_553de15d7a928c08f6612c4302064851/>
 </RadixThemesFlex>
   <RadixThemesFlex align={`start`} css={{"width": "100%", "alignItems": "start", "borderRadius": "1em", "backgroundColor": "#212123", "paddingInlineStart": "0.5em", "paddingInlineEnd": "0.5em", "paddingTop": "0.5em", "paddingBottom": "0.5em"}} direction={`column`} gap={`5`}>
   <RadixThemesFlex align={`start`} direction={`row`} gap={`2`}>
@@ -312,7 +312,7 @@ export default function Component() {
                 `}
 </RadixThemesText>
   <img alt={`Imagen de Home del Proyecto Ecomerse`} css={{"height": "15em", "aspectRatio": "16 / 9", "alignSelf": "center"}} src={`/ProyectEcomerse/Index.jpg`}/>
-  <Flex_a1fc7e1fe923b54827b6e8d802468788/>
+  <Flex_98cf0381d7857d569c427b65155ef4f4/>
 </RadixThemesFlex>
   <RadixThemesFlex align={`start`} css={{"width": "100%", "alignItems": "start", "borderRadius": "1em", "backgroundColor": "#212123", "paddingInlineStart": "0.5em", "paddingInlineEnd": "0.5em", "paddingTop": "0.5em", "paddingBottom": "0.5em"}} direction={`column`} gap={`5`}>
   <RadixThemesFlex align={`start`} direction={`row`} gap={`2`}>
@@ -327,7 +327,7 @@ export default function Component() {
                 `}
 </RadixThemesText>
   <img alt={`Imagen de Home del Proyecto Links`} css={{"height": "15em", "aspectRatio": "16 / 9", "alignSelf": "center"}} src={`/ProyectLinks/Home.png`}/>
-  <Flex_4b0734687e9bc11324d3d4e490d18f88/>
+  <Flex_8b526a18776dcd9f8f91183131301722/>
 </RadixThemesFlex>
 </RadixThemesFlex>
 </RadixThemesFlex>

@@ -15,45 +15,26 @@ import NextHead from "next/head"
 
 
 
-export function Fragment_e9a05c105aa9215aeba52aeec8fe2e76 () {
-  const state = useContext(StateContexts.state)
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
+export function Modal_c9ae8e7176597d400849d1334886d009 () {
+  const state__modal_diplo = useContext(StateContexts.state__modal_diplo)
 
 
   return (
-    <Fragment>
-  {isTrue(((!state.is_hydrated) || (connectErrors.length > 0))) ? (
-  <Fragment>
-  <LucideWifiOffIcon css={{"color": "crimson", "zIndex": 9999, "position": "fixed", "bottom": "30px", "right": "30px", "animation": `${pulse} 1s infinite`}} size={32}>
-  {`wifi_off`}
-</LucideWifiOffIcon>
-</Fragment>
-) : (
-  <Fragment/>
-)}
-</Fragment>
-  )
-}
-
-const pulse = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`
-
-
-export function Link_85f35b1e68e1b53b9165da2d4888fa13 () {
-
-
-  return (
-    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`https://www.linkedin.com/in/lautaro-rivata-38b770a1/`} passHref={true}>
-  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/linkedin.svg`}/>
-</NextLink>
-</RadixThemesLink>
+    <Modal isOpen={state__modal_diplo.show}>
+  <ModalOverlay>
+  <ModalContent>
+  <ModalHeader>
+  {`Diplo Web Full Stack`}
+</ModalHeader>
+  <ModalBody>
+  <img src={`/CertificadoDiploWeb.jpg`}/>
+</ModalBody>
+  <ModalFooter>
+  <Button_a90f479e4623df887b1cc124676ada4f/>
+</ModalFooter>
+</ModalContent>
+</ModalOverlay>
+</Modal>
   )
 }
 
@@ -86,6 +67,72 @@ export function Fragment_ac0b06893fc1b15016f3e0532508036d () {
   )
 }
 
+export function Button_f26a0af37048f709eb55576b53091cf3 () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+  const on_click_01041feec2186d2f1866cdc3bc5e9caf = useCallback((_e) => addEvents([Event("_download", {url:`/2024 - Lautaro Rivata FullStack.pdf`,filename:`Lautaro Rivata FullStack.pdf`})], (_e), {}), [addEvents, Event])
+
+  return (
+    <RadixThemesButton css={{"width": "100%", "borderColor": null, "borderWidth": null, "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "&:hover": {"backgroundColor": "#D9525E"}}} onClick={on_click_01041feec2186d2f1866cdc3bc5e9caf}>
+  <RadixThemesFlex align={`start`} css={{"width": "100%"}} direction={`row`} gap={`2`}>
+  <img alt={`Ver CV`} css={{"width": "1.5em", "height": "1.5em", "margin": "0.8em"}} src={`/icons/file-regular.svg`}/>
+  <RadixThemesFlex align={`start`} css={{"alignItems": "start", "paddingTop": "0.5em", "paddingBottom": "0.5em", "paddingRight": "0.5em"}} direction={`column`} gap={`2`}>
+  <RadixThemesText as={`p`} css={{"fontFamily": "Ubuntu", "fontWeight": "500", "fontSize": "1em", "color": "#F2F2F2"}}>
+  {`Ver CV`}
+</RadixThemesText>
+  <RadixThemesText as={`p`} css={{"fontWeight": "300", "fontSize": "0.8em", "color": "#A6A6A6"}}>
+  {`Aquí puedes descargar mi Curriculum Vitae`}
+</RadixThemesText>
+</RadixThemesFlex>
+</RadixThemesFlex>
+</RadixThemesButton>
+  )
+}
+
+export function Fragment_e9a05c105aa9215aeba52aeec8fe2e76 () {
+  const state = useContext(StateContexts.state)
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+  return (
+    <Fragment>
+  {isTrue(((!state.is_hydrated) || (connectErrors.length > 0))) ? (
+  <Fragment>
+  <LucideWifiOffIcon css={{"color": "crimson", "zIndex": 9999, "position": "fixed", "bottom": "30px", "right": "30px", "animation": `${pulse} 1s infinite`}} size={32}>
+  {`wifi_off`}
+</LucideWifiOffIcon>
+</Fragment>
+) : (
+  <Fragment/>
+)}
+</Fragment>
+  )
+}
+
+export function Link_41bb85c5c5d29ae924ff55304f21433d () {
+
+
+  return (
+    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`https://github.com/LautaRivata/`} passHref={true}>
+  <img alt={`GitHub`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/github.svg`}/>
+</NextLink>
+</RadixThemesLink>
+  )
+}
+
+export function Link_10dba02501660ad418a7a217109dd7a2 () {
+
+
+  return (
+    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
+  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/email.svg`}/>
+</NextLink>
+</RadixThemesLink>
+  )
+}
+
 export function Modal_ae231c9e3230c6d016a4b8dd8e6a182b () {
   const state__modaltitulo = useContext(StateContexts.state__modaltitulo)
 
@@ -109,27 +156,15 @@ export function Modal_ae231c9e3230c6d016a4b8dd8e6a182b () {
   )
 }
 
-export function Link_7f13fd584683f28b0fc10d20f5d81faf () {
+export function Button_a90f479e4623df887b1cc124676ada4f () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
 
+  const on_click_534692acb4488c609bde3de0659d561f = useCallback((_e) => addEvents([Event("state.modal_diplo.change", {})], (_e), {}), [addEvents, Event])
 
   return (
-    <RadixThemesLink asChild={true} css={{"width": "100%", "fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`https://github.com/LautaRivata/`} passHref={true}>
-  <RadixThemesButton css={{"borderColor": null, "borderWidth": null, "width": "100%", "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "&:hover": {"backgroundColor": "#D9525E"}}}>
-  <RadixThemesFlex align={`start`} css={{"width": "100%"}} direction={`row`} gap={`2`}>
-  <img alt={`Github`} css={{"width": "1.5em", "height": "1.5em", "margin": "0.8em"}} src={`/icons/github.svg`}/>
-  <RadixThemesFlex align={`start`} css={{"alignItems": "start", "paddingTop": "0.5em", "paddingBottom": "0.5em", "paddingRight": "0.5em"}} direction={`column`} gap={`2`}>
-  <RadixThemesText as={`p`} css={{"fontFamily": "Ubuntu", "fontWeight": "500", "fontSize": "1em", "color": "#F2F2F2"}}>
-  {`Github`}
-</RadixThemesText>
-  <RadixThemesText as={`p`} css={{"fontWeight": "300", "fontSize": "0.8em", "color": "#A6A6A6"}}>
-  {`Conoce mis Repositorios`}
-</RadixThemesText>
-</RadixThemesFlex>
-</RadixThemesFlex>
+    <RadixThemesButton css={{"width": "100%", "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "&:hover": {"backgroundColor": "#D9525E"}}} onClick={on_click_534692acb4488c609bde3de0659d561f}>
+  {`Cerar`}
 </RadixThemesButton>
-</NextLink>
-</RadixThemesLink>
   )
 }
 
@@ -155,40 +190,6 @@ export function Button_5896ba73517b5a2da7c590867e67dc2e () {
   )
 }
 
-export function Button_f26a0af37048f709eb55576b53091cf3 () {
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-  const on_click_01041feec2186d2f1866cdc3bc5e9caf = useCallback((_e) => addEvents([Event("_download", {url:`/2024 - Lautaro Rivata FullStack.pdf`,filename:`Lautaro Rivata FullStack.pdf`})], (_e), {}), [addEvents, Event])
-
-  return (
-    <RadixThemesButton css={{"width": "100%", "borderColor": null, "borderWidth": null, "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "&:hover": {"backgroundColor": "#D9525E"}}} onClick={on_click_01041feec2186d2f1866cdc3bc5e9caf}>
-  <RadixThemesFlex align={`start`} css={{"width": "100%"}} direction={`row`} gap={`2`}>
-  <img alt={`Ver CV`} css={{"width": "1.5em", "height": "1.5em", "margin": "0.8em"}} src={`/icons/file-regular.svg`}/>
-  <RadixThemesFlex align={`start`} css={{"alignItems": "start", "paddingTop": "0.5em", "paddingBottom": "0.5em", "paddingRight": "0.5em"}} direction={`column`} gap={`2`}>
-  <RadixThemesText as={`p`} css={{"fontFamily": "Ubuntu", "fontWeight": "500", "fontSize": "1em", "color": "#F2F2F2"}}>
-  {`Ver CV`}
-</RadixThemesText>
-  <RadixThemesText as={`p`} css={{"fontWeight": "300", "fontSize": "0.8em", "color": "#A6A6A6"}}>
-  {`Aquí puedes descargar mi Curriculum Vitae`}
-</RadixThemesText>
-</RadixThemesFlex>
-</RadixThemesFlex>
-</RadixThemesButton>
-  )
-}
-
-export function Link_41bb85c5c5d29ae924ff55304f21433d () {
-
-
-  return (
-    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`https://github.com/LautaRivata/`} passHref={true}>
-  <img alt={`GitHub`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/github.svg`}/>
-</NextLink>
-</RadixThemesLink>
-  )
-}
-
 export function Button_6240099e2d40374e0a72cb0b8d1ba5ed () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
@@ -201,47 +202,25 @@ export function Button_6240099e2d40374e0a72cb0b8d1ba5ed () {
   )
 }
 
-export function Button_eae22714136c47abeed25899beb5b5d8 () {
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
+export function Link_7f13fd584683f28b0fc10d20f5d81faf () {
 
-  const on_click_021d85cea0cb5d0410a6a559cef3c699 = useCallback((_e) => addEvents([Event("state.modaltitulo.change", {})], (_e), {}), [addEvents, Event])
 
   return (
-    <RadixThemesButton css={{"width": "100%", "borderColor": null, "borderWidth": null, "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "&:hover": {"backgroundColor": "#D9525E"}}} onClick={on_click_021d85cea0cb5d0410a6a559cef3c699}>
+    <RadixThemesLink asChild={true} css={{"width": "100%", "fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`https://github.com/LautaRivata/`} passHref={true}>
+  <RadixThemesButton css={{"borderColor": null, "borderWidth": null, "width": "100%", "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "&:hover": {"backgroundColor": "#D9525E"}}}>
   <RadixThemesFlex align={`start`} css={{"width": "100%"}} direction={`row`} gap={`2`}>
-  <img alt={`Ingeniero Biomedico`} css={{"width": "1.5em", "height": "1.5em", "margin": "0.8em"}} src={`/icons/graduation-cap-solid.svg`}/>
+  <img alt={`Github`} css={{"width": "1.5em", "height": "1.5em", "margin": "0.8em"}} src={`/icons/github.svg`}/>
   <RadixThemesFlex align={`start`} css={{"alignItems": "start", "paddingTop": "0.5em", "paddingBottom": "0.5em", "paddingRight": "0.5em"}} direction={`column`} gap={`2`}>
   <RadixThemesText as={`p`} css={{"fontFamily": "Ubuntu", "fontWeight": "500", "fontSize": "1em", "color": "#F2F2F2"}}>
-  {`Ingeniero Biomedico`}
+  {`Github`}
 </RadixThemesText>
   <RadixThemesText as={`p`} css={{"fontWeight": "300", "fontSize": "0.8em", "color": "#A6A6A6"}}>
-  {`Universidad Nacional de Cordoba FCEFyN`}
+  {`Conoce mis Repositorios`}
 </RadixThemesText>
 </RadixThemesFlex>
 </RadixThemesFlex>
 </RadixThemesButton>
-  )
-}
-
-export function Button_a90f479e4623df887b1cc124676ada4f () {
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-  const on_click_534692acb4488c609bde3de0659d561f = useCallback((_e) => addEvents([Event("state.modal_diplo.change", {})], (_e), {}), [addEvents, Event])
-
-  return (
-    <RadixThemesButton css={{"width": "100%", "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "&:hover": {"backgroundColor": "#D9525E"}}} onClick={on_click_534692acb4488c609bde3de0659d561f}>
-  {`Cerar`}
-</RadixThemesButton>
-  )
-}
-
-export function Link_10dba02501660ad418a7a217109dd7a2 () {
-
-
-  return (
-    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
-  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/email.svg`}/>
 </NextLink>
 </RadixThemesLink>
   )
@@ -271,28 +250,49 @@ export function Link_20ba9b4047e0fd644494d31e262028dd () {
   )
 }
 
-export function Modal_c9ae8e7176597d400849d1334886d009 () {
-  const state__modal_diplo = useContext(StateContexts.state__modal_diplo)
+export function Button_eae22714136c47abeed25899beb5b5d8 () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+  const on_click_021d85cea0cb5d0410a6a559cef3c699 = useCallback((_e) => addEvents([Event("state.modaltitulo.change", {})], (_e), {}), [addEvents, Event])
+
+  return (
+    <RadixThemesButton css={{"width": "100%", "borderColor": null, "borderWidth": null, "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "&:hover": {"backgroundColor": "#D9525E"}}} onClick={on_click_021d85cea0cb5d0410a6a559cef3c699}>
+  <RadixThemesFlex align={`start`} css={{"width": "100%"}} direction={`row`} gap={`2`}>
+  <img alt={`Ingeniero Biomedico`} css={{"width": "1.5em", "height": "1.5em", "margin": "0.8em"}} src={`/icons/graduation-cap-solid.svg`}/>
+  <RadixThemesFlex align={`start`} css={{"alignItems": "start", "paddingTop": "0.5em", "paddingBottom": "0.5em", "paddingRight": "0.5em"}} direction={`column`} gap={`2`}>
+  <RadixThemesText as={`p`} css={{"fontFamily": "Ubuntu", "fontWeight": "500", "fontSize": "1em", "color": "#F2F2F2"}}>
+  {`Ingeniero Biomedico`}
+</RadixThemesText>
+  <RadixThemesText as={`p`} css={{"fontWeight": "300", "fontSize": "0.8em", "color": "#A6A6A6"}}>
+  {`Universidad Nacional de Cordoba FCEFyN`}
+</RadixThemesText>
+</RadixThemesFlex>
+</RadixThemesFlex>
+</RadixThemesButton>
+  )
+}
+
+export function Link_85f35b1e68e1b53b9165da2d4888fa13 () {
 
 
   return (
-    <Modal isOpen={state__modal_diplo.show}>
-  <ModalOverlay>
-  <ModalContent>
-  <ModalHeader>
-  {`Diplo Web Full Stack`}
-</ModalHeader>
-  <ModalBody>
-  <img src={`/CertificadoDiploWeb.jpg`}/>
-</ModalBody>
-  <ModalFooter>
-  <Button_a90f479e4623df887b1cc124676ada4f/>
-</ModalFooter>
-</ModalContent>
-</ModalOverlay>
-</Modal>
+    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`https://www.linkedin.com/in/lautaro-rivata-38b770a1/`} passHref={true}>
+  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/linkedin.svg`}/>
+</NextLink>
+</RadixThemesLink>
   )
 }
+
+const pulse = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
+
 
 export default function Component() {
 

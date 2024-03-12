@@ -15,47 +15,29 @@ import NextHead from "next/head"
 
 
 
-export function Link_41bb85c5c5d29ae924ff55304f21433d () {
+export function Link_10dba02501660ad418a7a217109dd7a2 () {
 
 
   return (
     <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`https://github.com/LautaRivata/`} passHref={true}>
-  <img alt={`GitHub`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/github.svg`}/>
+  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
+  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/email.svg`}/>
 </NextLink>
 </RadixThemesLink>
   )
 }
 
-export function Fragment_e9a05c105aa9215aeba52aeec8fe2e76 () {
-  const state = useContext(StateContexts.state)
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
+export function Link_85f35b1e68e1b53b9165da2d4888fa13 () {
 
 
   return (
-    <Fragment>
-  {isTrue(((!state.is_hydrated) || (connectErrors.length > 0))) ? (
-  <Fragment>
-  <LucideWifiOffIcon css={{"color": "crimson", "zIndex": 9999, "position": "fixed", "bottom": "30px", "right": "30px", "animation": `${pulse} 1s infinite`}} size={32}>
-  {`wifi_off`}
-</LucideWifiOffIcon>
-</Fragment>
-) : (
-  <Fragment/>
-)}
-</Fragment>
+    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`https://www.linkedin.com/in/lautaro-rivata-38b770a1/`} passHref={true}>
+  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/linkedin.svg`}/>
+</NextLink>
+</RadixThemesLink>
   )
 }
-
-const pulse = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`
-
 
 export function Fragment_ac0b06893fc1b15016f3e0532508036d () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
@@ -86,29 +68,47 @@ export function Fragment_ac0b06893fc1b15016f3e0532508036d () {
   )
 }
 
-export function Link_85f35b1e68e1b53b9165da2d4888fa13 () {
+export function Fragment_e9a05c105aa9215aeba52aeec8fe2e76 () {
+  const state = useContext(StateContexts.state)
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+
+  return (
+    <Fragment>
+  {isTrue(((!state.is_hydrated) || (connectErrors.length > 0))) ? (
+  <Fragment>
+  <LucideWifiOffIcon css={{"color": "crimson", "zIndex": 9999, "position": "fixed", "bottom": "30px", "right": "30px", "animation": `${pulse} 1s infinite`}} size={32}>
+  {`wifi_off`}
+</LucideWifiOffIcon>
+</Fragment>
+) : (
+  <Fragment/>
+)}
+</Fragment>
+  )
+}
+
+export function Link_41bb85c5c5d29ae924ff55304f21433d () {
 
 
   return (
     <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`https://www.linkedin.com/in/lautaro-rivata-38b770a1/`} passHref={true}>
-  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/linkedin.svg`}/>
+  <NextLink href={`https://github.com/LautaRivata/`} passHref={true}>
+  <img alt={`GitHub`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/github.svg`}/>
 </NextLink>
 </RadixThemesLink>
   )
 }
 
-export function Link_10dba02501660ad418a7a217109dd7a2 () {
+const pulse = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
 
-
-  return (
-    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
-  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/email.svg`}/>
-</NextLink>
-</RadixThemesLink>
-  )
-}
 
 export default function Component() {
 
