@@ -2,6 +2,7 @@ import reflex as rx
 import Portfolio.constants as const
 from Portfolio.components.action_button import action_button
 from Portfolio.components.link_button import link_button
+from Portfolio.styles.styles import SizeRadix
 
 
 def funk():
@@ -22,5 +23,6 @@ def contacto() -> rx.Component:
             "/icons/clipboard-check-regular.svg",
             action=rx.set_clipboard(f"{const.EMAIL}"),
         ),
+        spacing=SizeRadix.MEDIUM.value,
         width="100%"
     )

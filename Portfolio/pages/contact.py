@@ -8,7 +8,7 @@ from Portfolio.views.header import header
 from Portfolio.views.footer import footer
 from Portfolio.components.title import title
 from Portfolio.views.contacto import contacto
-from Portfolio.styles.styles import Size
+from Portfolio.styles.styles import Size, SizeRadix
 
 
 @rx.page(
@@ -24,7 +24,7 @@ def contact() -> rx.Component:
         navbar(),
         rx.center(
             rx.vstack(
-                header("xl"),
+                header("8"),
                 title("Contacto"),
                 contacto(),
                 title("Otros Contactos"),
@@ -33,7 +33,7 @@ def contact() -> rx.Component:
                 width="100%",
                 margin_y=Size.ZERO.value,
                 padding=Size.BIG.value,
-                spacing=Size.DEFAULT.value,
+                spacing=SizeRadix.MEDIUM.value,
             )
         ),
         footer()

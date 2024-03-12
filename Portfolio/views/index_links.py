@@ -3,9 +3,8 @@ import Portfolio.constants as const
 from Portfolio.routes import Route
 from Portfolio.components.action_button import action_button
 from Portfolio.components.link_button import link_button
-
 from Portfolio.components.title import title
-from Portfolio.styles.styles import Size
+from Portfolio.styles.styles import SizeRadix
 
 
 def index_links() -> rx.Component:
@@ -23,5 +22,5 @@ def index_links() -> rx.Component:
             const.LINKEDIN_URL
         ),
         width="100%",
-        spacing=Size.DEFAULT.value,
+        spacing=SizeRadix.MEDIUM.value,
     )

@@ -1,6 +1,6 @@
 import reflex as rx
 import Portfolio.styles.styles as styles
-from Portfolio.styles.styles import Size, Color
+from Portfolio.styles.styles import Size, Color, SizeRadix
 
 
 def button(title: str, body: str, image: str, highlight=False) -> rx.Component:
@@ -17,7 +17,7 @@ def button(title: str, body: str, image: str, highlight=False) -> rx.Component:
                 rx.text(title, style=styles.button_title_style),
                 rx.text(body, style=styles.button_body_style),
                 align_items="start",
-                spacing=Size.SMALL.value,
+                spacing=SizeRadix.SMALL.value,
                 padding_y=Size.SMALL.value,
                 padding_right=Size.SMALL.value
             ),

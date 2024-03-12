@@ -8,9 +8,9 @@ from Portfolio.styles.fonts import Font, FontWeight
 
 
 def nav_menu() -> rx.Component:
-    return rx.breadcrumb(
-        rx.menu(
-            rx.menu_button(
+    return rx.chakra.breadcrumb(
+        rx.chakra.menu(
+            rx.chakra.menu_button(
                 rx.image(
                     src="/icons/bars-solid.svg",
                     width=Size.DEFAULT.value,
@@ -18,18 +18,18 @@ def nav_menu() -> rx.Component:
                     alt="Icono Menu"
                 ),
             ),
-            rx.menu_list(
-                rx.menu_item(
+            rx.chakra.menu_list(
+                rx.chakra.menu_item(
                     nav_item("My Perfil", "/icons/user-regular.svg",
                              Route.MYPROFILE.value),
                     style=styles.menu_style
                 ),
-                rx.menu_item(
+                rx.chakra.menu_item(
                     nav_item("Proyectos", "/icons/code.svg",
                              Route.PROYECTS.value),
                     style=styles.menu_style
                 ),
-                rx.menu_item(
+                rx.chakra.menu_item(
                     nav_item("Contacto", "/icons/email.svg",
                              Route.CONTACT.value),
                     style=styles.menu_style

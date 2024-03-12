@@ -1,5 +1,5 @@
 import reflex as rx
-from Portfolio.styles.styles import button_type_style
+from Portfolio.styles.styles import button_type_style, SizeRadix
 from Portfolio.components.action_button import action_button
 
 
@@ -31,16 +31,16 @@ def certificaciones() -> rx.Component:
             "/icons/graduation-cap-solid.svg",
             ModalDiplo.change,
         ),
-        rx.modal(
-            rx.modal_overlay(
-                rx.modal_content(
-                    rx.modal_header("Ingeniero Biomedico"),
-                    rx.modal_body(
+        rx.chakra.modal(
+            rx.chakra.modal_overlay(
+                rx.chakra.modal_content(
+                    rx.chakra.modal_header("Ingeniero Biomedico"),
+                    rx.chakra.modal_body(
                         rx.image(
                             src="/CertificadoIngBio.jpg",
                         )
                     ),
-                    rx.modal_footer(
+                    rx.chakra.modal_footer(
                         rx.button(
                             "Cerar",
                             on_click=Modaltitulo.change,
@@ -50,16 +50,16 @@ def certificaciones() -> rx.Component:
             ),
             is_open=Modaltitulo.show,
         ),
-        rx.modal(
-            rx.modal_overlay(
-                rx.modal_content(
-                    rx.modal_header("Diplo Web Full Stack"),
-                    rx.modal_body(
+        rx.chakra.modal(
+            rx.chakra.modal_overlay(
+                rx.chakra.modal_content(
+                    rx.chakra.modal_header("Diplo Web Full Stack"),
+                    rx.chakra.modal_body(
                         rx.image(
                             src="/CertificadoDiploWeb.jpg",
                         )
                     ),
-                    rx.modal_footer(
+                    rx.chakra.modal_footer(
                         rx.button(
                             "Cerar",
                             on_click=ModalDiplo.change,
@@ -69,5 +69,6 @@ def certificaciones() -> rx.Component:
             ),
             is_open=ModalDiplo.show,
         ),
+        spacing=SizeRadix.MEDIUM.value,
         width="100%",
     )

@@ -3,7 +3,7 @@ import datetime
 import Portfolio.constants as const
 from Portfolio.components.link_icon import link_icon
 from Portfolio.routes import Route
-from Portfolio.styles.styles import Size
+from Portfolio.styles.styles import Size, SizeRadix
 from Portfolio.styles.colors import Color, TextColor
 
 
@@ -13,8 +13,8 @@ def footer() -> rx.Component:
         rx.link(
             rx.box(
                 f"©{datetime.date.today().year} ",
-                rx.span("ByTupak de Lautaro Rivata",
-                        color=Color.PRIMARY.value),
+                rx.chakra.span("ByTupak de Lautaro Rivata",
+                               color=Color.PRIMARY.value),
                 "  V1.0",
             ),
             href=Route.INDEX.value,
@@ -37,10 +37,10 @@ def footer() -> rx.Component:
                 f"mailto:{const.EMAIL}",
                 "LinkedIn"
             ),
-            spacing=Size.LARGE.value
+            spacing=SizeRadix.LARGE.value
         ),
         rx.spacer(),
-        spacing=Size.DEFAULT.value,
+        spacing=SizeRadix.DEFAULT.value,
         color=TextColor.FOOTER.value,
         bg=Color.CONTENT.value,
         padding_x=Size.BIG.value,

@@ -5,7 +5,7 @@ from Portfolio.styles.colors import Color, TextColor
 
 def info_text(title: str, body: str) -> rx.Component:
     return rx.box(
-        rx.span(
+        rx.chakra.span(
             title,
             font_weight="bold",
             color=Color.PRIMARY.value

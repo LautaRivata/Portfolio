@@ -8,7 +8,7 @@ from Portfolio.styles.fonts import Font, FontWeight
 
 
 def nav_bread() -> rx.Component:
-    return rx.breadcrumb(
+    return rx.chakra.breadcrumb(
         nav_item("My Perfil", "/icons/user-regular.svg",
                  Route.MYPROFILE.value),
         nav_item("Proyectos", "/icons/code.svg", Route.PROYECTS.value),

@@ -1,7 +1,7 @@
 import reflex as rx
 import datetime
 import Portfolio.constants as const
-from Portfolio.styles.styles import Size
+from Portfolio.styles.styles import Size, SizeRadix
 from Portfolio.styles.colors import Color, TextColor
 from Portfolio.components.link_icon import link_icon
 from Portfolio.components.info_text import info_text
@@ -32,7 +32,7 @@ def about() -> rx.Component:
             width="100%"
         ),
         width="100%",
-        spacing=Size.BIG.value,
+        spacing=SizeRadix.BIG.value,
         align_items="start"
     )
 

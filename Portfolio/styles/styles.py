@@ -6,7 +6,6 @@ from .fonts import Font, FontWeight
 # Constants
 MAX_WIDTH = "700px"
 
-# Sizes
 
 STYLESHEETS = [
     "https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap",
@@ -14,6 +13,19 @@ STYLESHEETS = [
     "https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&display=swap",
     "https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500&display=swap"
 ]
+
+# Sizes
+
+
+class SizeRadix(Enum):
+    ZERO = "0"
+    SMALL = "2"
+    MEDIUM = "4"
+    DEFAULT = "5"
+    BREAD = "6"
+    LARGE = "7"
+    BIG = "8"
+    VERY_BIG = "9"
 
 
 class Size(Enum):
@@ -35,20 +47,12 @@ BASE_STYLE = {
     "font_weight": FontWeight.LIGHT.value,
     # Eliminar el !important en futuras versiones
     "background_color": Color.BACKGROUND.value,
-    rx.Text: {
-        "font_family": Font.DEFAULT.value,
-        "font_weight": FontWeight.LIGHT.value
-    },
-    rx.Box: {
-        "font_family": Font.DEFAULT.value,
-        "font_weight": FontWeight.LIGHT.value,
-    },
-    rx.Heading: {
+    rx.heading: {
         "color": TextColor.HEADER.value,
         "font_family": Font.TITLE.value,
         "font_weight": FontWeight.MEDIUM.value
     },
-    rx.Button: {
+    rx.button: {
         "width": "100%",
         "height": "100%",
         "padding": Size.SMALL.value,
@@ -61,7 +65,7 @@ BASE_STYLE = {
             "background_color": Color.SECONDARY.value
         }
     },
-    rx.Link: {
+    rx.link: {
         "font_family": Font.DEFAULT.value,
         "font_weight": FontWeight.LIGHT.value,
         "text_decoration": "none",

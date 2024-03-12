@@ -10,7 +10,7 @@ from Portfolio.components.navbar import navbar
 from Portfolio.components.action_button import action_button
 from Portfolio.views.footer import footer
 from Portfolio.components.title import title
-from Portfolio.styles.styles import Size
+from Portfolio.styles.styles import Size, SizeRadix
 
 
 @rx.page(
@@ -26,7 +26,7 @@ def my_profile() -> rx.Component:
         navbar(),
         rx.center(
             rx.vstack(
-                header("xl"),
+                header("8"),
                 title("Certificaciones"),
                 certificaciones(),
                 title("Links de Interes"),
@@ -46,7 +46,7 @@ def my_profile() -> rx.Component:
                 width="100%",
                 margin_y=Size.ZERO.value,
                 padding=Size.BIG.value,
-                spacing=Size.DEFAULT.value,
+                spacing=SizeRadix.MEDIUM.value,
             )
         ),
         footer(),

@@ -1,6 +1,6 @@
 import reflex as rx
 import Portfolio.styles.styles as styles
-from Portfolio.styles.styles import Size, Color, Font, TextColor, FontWeight
+from Portfolio.styles.styles import Size, Color, Font, TextColor, FontWeight, SizeRadix
 from Portfolio.components.link_icon import link_icon
 from Portfolio.components.title import title
 from Portfolio.components.button import button
@@ -37,7 +37,7 @@ def proyect_component(name: str, body: str, languaje: list, imagen: str, alt: st
             align_self="center",
         ),
         rx.hstack(
-            rx.foreach(languaje, lambda l: rx.badge(l, variant="subtle", bg=Color.PRIMARY.value,
+            rx.foreach(languaje, lambda l: rx.chakra.badge(l, variant="subtle", bg=Color.PRIMARY.value,
                        color=TextColor.BODY.value, border_color=Color.SECONDARY.value, border_width=2,)),
             align_self="end",
         ),
@@ -45,7 +45,7 @@ def proyect_component(name: str, body: str, languaje: list, imagen: str, alt: st
         align_items="start",
         border_radius=Size.DEFAULT.value,
         background_color=Color.CONTENT.value,
-        spacing=Size.DEFAULT.value,
+        spacing=SizeRadix.DEFAULT.value,
         padding_x=Size.SMALL.value,
         padding_y=Size.SMALL.value,
     )

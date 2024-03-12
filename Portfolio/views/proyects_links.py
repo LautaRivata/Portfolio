@@ -1,6 +1,6 @@
 import reflex as rx
 from Portfolio.components.proyect_component import proyect_component
-from Portfolio.styles.styles import Size
+from Portfolio.styles.styles import SizeRadix
 
 
 def proyects_links() -> rx.Component:
@@ -39,5 +39,5 @@ def proyects_links() -> rx.Component:
             icon="/icons/python.svg",
         ),
         width="100%",
-        spacing=Size.DEFAULT.value,
+        spacing=SizeRadix.MEDIUM.value,
     )

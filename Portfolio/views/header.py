@@ -1,7 +1,7 @@
 import reflex as rx
 import datetime
 import Portfolio.constants as const
-from Portfolio.styles.styles import Size, Font, navbar_title_style
+from Portfolio.styles.styles import Size, Font, navbar_title_style, SizeRadix
 from Portfolio.styles.colors import Color, TextColor
 from Portfolio.components.link_icon import link_icon
 
@@ -13,6 +13,7 @@ def header(size: str) -> rx.Component:
                 name="By Tupak",
                 size=size,
                 src="/me.jpg",
+                radius="large",
                 color=TextColor.BODY.value,
                 bg=Color.CONTENT.value,
                 padding="2px",
@@ -22,13 +23,14 @@ def header(size: str) -> rx.Component:
             rx.vstack(
                 rx.heading(
                     "Lautaro Rivata",
-                    size="lg"
+                    size="8",
+                    padding=Size.ZERO.value,
+                    margin=Size.ZERO.value
                 ),
                 rx.text(
-                    rx.span("@By", color=Color.PRIMARY.value),
-                    rx.span("Tupak", color=Color.SECONDARY.value),
+                    rx.chakra.span("@By", color=Color.PRIMARY.value),
+                    rx.chakra.span("Tupak", color=Color.SECONDARY.value),
                     style=navbar_title_style,
-                    margin_top=Size.ZERO.value,
                 ),
                 rx.hstack(
                     link_icon(
@@ -46,14 +48,15 @@ def header(size: str) -> rx.Component:
                         f"mailto:{const.EMAIL}",
                         "LinkedIn"
                     ),
-                    spacing=Size.LARGE.value
+                    spacing=SizeRadix.LARGE.value
                 ),
                 align_items="start"
             ),
-            spacing=Size.DEFAULT.value
+            spacing=SizeRadix.DEFAULT.value,
+            align_items="center",
         ),
         width="100%",
-        spacing=Size.BIG.value,
+        spacing=SizeRadix.DEFAULT.value,
         align_items="start"
     )
 

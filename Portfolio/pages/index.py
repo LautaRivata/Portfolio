@@ -25,7 +25,7 @@ def index() -> rx.Component:
         navbar(),
         rx.center(
             rx.vstack(
-                header("2xl"),
+                header("9"),
                 about(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",
