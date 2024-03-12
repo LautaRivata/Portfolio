@@ -15,74 +15,37 @@ import NextHead from "next/head"
 
 
 
-export function Fragment_ac0b06893fc1b15016f3e0532508036d () {
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
+const pulse = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
+
+
+export function Link_20ba9b4047e0fd644494d31e262028dd () {
 
 
   return (
-    <Fragment>
-  {isTrue(connectErrors.length >= 2) ? (
-  <Fragment>
-  <RadixThemesDialog.Root css={{"zIndex": 9999}} open={connectErrors.length >= 2}>
-  <RadixThemesDialog.Content>
-  <RadixThemesDialog.Title>
-  {`Connection Error`}
-</RadixThemesDialog.Title>
-  <RadixThemesText as={`p`}>
-  {`Cannot connect to server: `}
-  {(connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''}
-  {`. Check if server is reachable at `}
-  {getBackendURL(env.EVENT).href}
-</RadixThemesText>
-</RadixThemesDialog.Content>
-</RadixThemesDialog.Root>
-</Fragment>
-) : (
-  <Fragment/>
-)}
-</Fragment>
-  )
-}
-
-export function Button_eb6428f80061586c4d38a953cd1fc9ce () {
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-  const on_click_36c35cb34d24c3a675ae3fce9adacf27 = useCallback((_e) => addEvents([Event("_set_clipboard", {content:`lautarivata@gmail.com`})], (_e), {}), [addEvents, Event])
-
-  return (
-    <RadixThemesButton css={{"width": "100%", "borderColor": null, "borderWidth": null, "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "&:hover": {"backgroundColor": "#D9525E"}}} onClick={on_click_36c35cb34d24c3a675ae3fce9adacf27}>
+    <RadixThemesLink asChild={true} css={{"width": "100%", "fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`https://www.linkedin.com/in/lautaro-rivata-38b770a1/`} passHref={true}>
+  <RadixThemesButton css={{"borderColor": null, "borderWidth": null, "width": "100%", "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "&:hover": {"backgroundColor": "#D9525E"}}}>
   <RadixThemesFlex align={`start`} css={{"width": "100%"}} direction={`row`} gap={`2`}>
-  <img alt={`Copiar Email`} css={{"width": "1.5em", "height": "1.5em", "margin": "0.8em"}} src={`/icons/clipboard-check-regular.svg`}/>
+  <img alt={`Linked In`} css={{"width": "1.5em", "height": "1.5em", "margin": "0.8em"}} src={`/icons/linkedin.svg`}/>
   <RadixThemesFlex align={`start`} css={{"alignItems": "start", "paddingTop": "0.5em", "paddingBottom": "0.5em", "paddingRight": "0.5em"}} direction={`column`} gap={`2`}>
   <RadixThemesText as={`p`} css={{"fontFamily": "Ubuntu", "fontWeight": "500", "fontSize": "1em", "color": "#F2F2F2"}}>
-  {`Copiar Email`}
+  {`Linked In`}
 </RadixThemesText>
   <RadixThemesText as={`p`} css={{"fontWeight": "300", "fontSize": "0.8em", "color": "#A6A6A6"}}>
-  {`Click aqui para copiar email al portapapeles`}
+  {`Mi experiencia en el Ámbito Laboral`}
 </RadixThemesText>
 </RadixThemesFlex>
 </RadixThemesFlex>
 </RadixThemesButton>
-  )
-}
-
-export function Fragment_e9a05c105aa9215aeba52aeec8fe2e76 () {
-  const state = useContext(StateContexts.state)
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
-
-
-  return (
-    <Fragment>
-  {isTrue(((!state.is_hydrated) || (connectErrors.length > 0))) ? (
-  <Fragment>
-  <LucideWifiOffIcon css={{"color": "crimson", "zIndex": 9999, "position": "fixed", "bottom": "30px", "right": "30px", "animation": `${pulse} 1s infinite`}} size={32}>
-  {`wifi_off`}
-</LucideWifiOffIcon>
-</Fragment>
-) : (
-  <Fragment/>
-)}
-</Fragment>
+</NextLink>
+</RadixThemesLink>
   )
 }
 
@@ -93,42 +56,6 @@ export function Link_41bb85c5c5d29ae924ff55304f21433d () {
     <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
   <NextLink href={`https://github.com/LautaRivata/`} passHref={true}>
   <img alt={`GitHub`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/github.svg`}/>
-</NextLink>
-</RadixThemesLink>
-  )
-}
-
-export function Link_a3467a52fb0967b7c2c9d223e6f20890 () {
-
-
-  return (
-    <RadixThemesLink asChild={true} css={{"width": "100%", "fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
-  <RadixThemesButton css={{"borderColor": null, "borderWidth": null, "width": "100%", "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "&:hover": {"backgroundColor": "#D9525E"}}}>
-  <RadixThemesFlex align={`start`} css={{"width": "100%"}} direction={`row`} gap={`2`}>
-  <img alt={`Email`} css={{"width": "1.5em", "height": "1.5em", "margin": "0.8em"}} src={`/icons/email.svg`}/>
-  <RadixThemesFlex align={`start`} css={{"alignItems": "start", "paddingTop": "0.5em", "paddingBottom": "0.5em", "paddingRight": "0.5em"}} direction={`column`} gap={`2`}>
-  <RadixThemesText as={`p`} css={{"fontFamily": "Ubuntu", "fontWeight": "500", "fontSize": "1em", "color": "#F2F2F2"}}>
-  {`Email`}
-</RadixThemesText>
-  <RadixThemesText as={`p`} css={{"fontWeight": "300", "fontSize": "0.8em", "color": "#A6A6A6"}}>
-  {`lautarivata@gmail.com`}
-</RadixThemesText>
-</RadixThemesFlex>
-</RadixThemesFlex>
-</RadixThemesButton>
-</NextLink>
-</RadixThemesLink>
-  )
-}
-
-export function Link_10dba02501660ad418a7a217109dd7a2 () {
-
-
-  return (
-    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
-  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/email.svg`}/>
 </NextLink>
 </RadixThemesLink>
   )
@@ -158,27 +85,37 @@ export function Link_7f13fd584683f28b0fc10d20f5d81faf () {
   )
 }
 
-export function Link_20ba9b4047e0fd644494d31e262028dd () {
+export function Link_10dba02501660ad418a7a217109dd7a2 () {
 
 
   return (
-    <RadixThemesLink asChild={true} css={{"width": "100%", "fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`https://www.linkedin.com/in/lautaro-rivata-38b770a1/`} passHref={true}>
-  <RadixThemesButton css={{"borderColor": null, "borderWidth": null, "width": "100%", "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "&:hover": {"backgroundColor": "#D9525E"}}}>
+    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
+  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/email.svg`}/>
+</NextLink>
+</RadixThemesLink>
+  )
+}
+
+export function Button_eb6428f80061586c4d38a953cd1fc9ce () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+
+  const on_click_36c35cb34d24c3a675ae3fce9adacf27 = useCallback((_e) => addEvents([Event("_set_clipboard", {content:`lautarivata@gmail.com`})], (_e), {}), [addEvents, Event])
+
+  return (
+    <RadixThemesButton css={{"width": "100%", "borderColor": null, "borderWidth": null, "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "&:hover": {"backgroundColor": "#D9525E"}}} onClick={on_click_36c35cb34d24c3a675ae3fce9adacf27}>
   <RadixThemesFlex align={`start`} css={{"width": "100%"}} direction={`row`} gap={`2`}>
-  <img alt={`Linked In`} css={{"width": "1.5em", "height": "1.5em", "margin": "0.8em"}} src={`/icons/linkedin.svg`}/>
+  <img alt={`Copiar Email`} css={{"width": "1.5em", "height": "1.5em", "margin": "0.8em"}} src={`/icons/clipboard-check-regular.svg`}/>
   <RadixThemesFlex align={`start`} css={{"alignItems": "start", "paddingTop": "0.5em", "paddingBottom": "0.5em", "paddingRight": "0.5em"}} direction={`column`} gap={`2`}>
   <RadixThemesText as={`p`} css={{"fontFamily": "Ubuntu", "fontWeight": "500", "fontSize": "1em", "color": "#F2F2F2"}}>
-  {`Linked In`}
+  {`Copiar Email`}
 </RadixThemesText>
   <RadixThemesText as={`p`} css={{"fontWeight": "300", "fontSize": "0.8em", "color": "#A6A6A6"}}>
-  {`Mi experiencia en el Ámbito Laboral`}
+  {`Click aqui para copiar email al portapapeles`}
 </RadixThemesText>
 </RadixThemesFlex>
 </RadixThemesFlex>
 </RadixThemesButton>
-</NextLink>
-</RadixThemesLink>
   )
 }
 
@@ -194,15 +131,78 @@ export function Link_85f35b1e68e1b53b9165da2d4888fa13 () {
   )
 }
 
-const pulse = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`
+export function Fragment_ac0b06893fc1b15016f3e0532508036d () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
 
+
+  return (
+    <Fragment>
+  {isTrue(connectErrors.length >= 2) ? (
+  <Fragment>
+  <RadixThemesDialog.Root css={{"zIndex": 9999}} open={connectErrors.length >= 2}>
+  <RadixThemesDialog.Content>
+  <RadixThemesDialog.Title>
+  {`Connection Error`}
+</RadixThemesDialog.Title>
+  <RadixThemesText as={`p`}>
+  {`Cannot connect to server: `}
+  {(connectErrors.length > 0) ? connectErrors[connectErrors.length - 1].message : ''}
+  {`. Check if server is reachable at `}
+  {getBackendURL(env.EVENT).href}
+</RadixThemesText>
+</RadixThemesDialog.Content>
+</RadixThemesDialog.Root>
+</Fragment>
+) : (
+  <Fragment/>
+)}
+</Fragment>
+  )
+}
+
+export function Fragment_966c0378eb9d65bdfb5286644be9b831 () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
+  const state = useContext(StateContexts.state)
+
+
+  return (
+    <Fragment>
+  {isTrue(((!state.is_hydrated) || (connectErrors.length > 0))) ? (
+  <Fragment>
+  <LucideWifiOffIcon css={{"color": "crimson", "zIndex": 9999, "position": "fixed", "bottom": "30px", "right": "30px", "animation": `${pulse} 1s infinite`}} size={32}>
+  {`wifi_off`}
+</LucideWifiOffIcon>
+</Fragment>
+) : (
+  <Fragment/>
+)}
+</Fragment>
+  )
+}
+
+export function Link_a3467a52fb0967b7c2c9d223e6f20890 () {
+
+
+  return (
+    <RadixThemesLink asChild={true} css={{"width": "100%", "fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
+  <RadixThemesButton css={{"borderColor": null, "borderWidth": null, "width": "100%", "height": "100%", "padding": "0.5em", "borderRadius": "1em", "color": "#F2F2F2", "backgroundColor": "#212123", "whiteSpace": "normal", "textAlign": "start", "&:hover": {"backgroundColor": "#D9525E"}}}>
+  <RadixThemesFlex align={`start`} css={{"width": "100%"}} direction={`row`} gap={`2`}>
+  <img alt={`Email`} css={{"width": "1.5em", "height": "1.5em", "margin": "0.8em"}} src={`/icons/email.svg`}/>
+  <RadixThemesFlex align={`start`} css={{"alignItems": "start", "paddingTop": "0.5em", "paddingBottom": "0.5em", "paddingRight": "0.5em"}} direction={`column`} gap={`2`}>
+  <RadixThemesText as={`p`} css={{"fontFamily": "Ubuntu", "fontWeight": "500", "fontSize": "1em", "color": "#F2F2F2"}}>
+  {`Email`}
+</RadixThemesText>
+  <RadixThemesText as={`p`} css={{"fontWeight": "300", "fontSize": "0.8em", "color": "#A6A6A6"}}>
+  {`lautarivata@gmail.com`}
+</RadixThemesText>
+</RadixThemesFlex>
+</RadixThemesFlex>
+</RadixThemesButton>
+</NextLink>
+</RadixThemesLink>
+  )
+}
 
 export default function Component() {
 
@@ -210,7 +210,7 @@ export default function Component() {
     <Fragment>
   <Fragment>
   <div css={{"position": "fixed", "width": "100vw", "height": "0"}}>
-  <Fragment_e9a05c105aa9215aeba52aeec8fe2e76/>
+  <Fragment_966c0378eb9d65bdfb5286644be9b831/>
 </div>
   <Fragment_ac0b06893fc1b15016f3e0532508036d/>
 </Fragment>
