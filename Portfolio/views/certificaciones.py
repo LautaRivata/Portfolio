@@ -17,6 +17,13 @@ class ModalDiplo(rx.State):
         self.show = not (self.show)
 
 
+class ModalQAA(rx.State):
+    show: bool = False
+
+    def change(self):
+        self.show = not (self.show)
+
+
 def certificaciones() -> rx.Component:
     return rx.vstack(
         action_button(
@@ -26,10 +33,16 @@ def certificaciones() -> rx.Component:
             Modaltitulo.change,
         ),
         action_button(
-            "Desarrollo WEB Full Stak",
+            "Desarrollo WEB Full Stack",
             "Icaro Organizacion",
             "/icons/graduation-cap-solid.svg",
             ModalDiplo.change,
+        ),
+        action_button(
+            "Tester QA Automation",
+            "Icaro Organizacion",
+            "/icons/graduation-cap-solid.svg",
+            ModalQAA.change,
         ),
         rx.chakra.modal(
             rx.chakra.modal_overlay(
@@ -68,6 +81,25 @@ def certificaciones() -> rx.Component:
                 )
             ),
             is_open=ModalDiplo.show,
+        ),
+        rx.chakra.modal(
+            rx.chakra.modal_overlay(
+                rx.chakra.modal_content(
+                    rx.chakra.modal_header("Tester QAA"),
+                    rx.chakra.modal_body(
+                        rx.image(
+                            src="/TesterQAACertificado.jpg",
+                        )
+                    ),
+                    rx.chakra.modal_footer(
+                        rx.button(
+                            "Cerar",
+                            on_click=ModalQAA.change,
+                        )
+                    ),
+                )
+            ),
+            is_open=ModalQAA.show,
         ),
         spacing=SizeRadix.MEDIUM.value,
         width="100%",

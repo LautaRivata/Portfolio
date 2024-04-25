@@ -2,7 +2,7 @@
 
 
 import { Fragment, useContext } from "react"
-import { EventLoopContext, StateContexts } from "/utils/context"
+import { EventLoopContext } from "/utils/context"
 import { Event, getBackendURL, isTrue } from "/utils/state"
 import { WifiOffIcon as LucideWifiOffIcon } from "lucide-react"
 import { keyframes } from "@emotion/react"
@@ -24,8 +24,9 @@ const pulse = keyframes`
 `
 
 
-export function Fragment_ac0b06893fc1b15016f3e0532508036d () {
+export function Fragment_6499b51736be44284c15de43340cb16c () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
+
 
 
   return (
@@ -53,18 +54,16 @@ export function Fragment_ac0b06893fc1b15016f3e0532508036d () {
   )
 }
 
-export function Fragment_966c0378eb9d65bdfb5286644be9b831 () {
+export function Fragment_cb5edf864ed730e6ef1545318d0da5a2 () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
-  const state = useContext(StateContexts.state)
+
 
 
   return (
     <Fragment>
-  {isTrue(((!state.is_hydrated) || (connectErrors.length > 0))) ? (
+  {isTrue(connectErrors.length > 0) ? (
   <Fragment>
-  <LucideWifiOffIcon css={{"color": "crimson", "zIndex": 9999, "position": "fixed", "bottom": "30px", "right": "30px", "animation": `${pulse} 1s infinite`}} size={32}>
-  {`wifi_off`}
-</LucideWifiOffIcon>
+  <LucideWifiOffIcon css={{"color": "crimson", "zIndex": 9999, "position": "fixed", "bottom": "30px", "right": "30px", "animation": `${pulse} 1s infinite`}} size={32}/>
 </Fragment>
 ) : (
   <Fragment/>
@@ -80,9 +79,9 @@ export default function Component() {
     <Fragment>
   <Fragment>
   <div css={{"position": "fixed", "width": "100vw", "height": "0"}}>
-  <Fragment_966c0378eb9d65bdfb5286644be9b831/>
+  <Fragment_cb5edf864ed730e6ef1545318d0da5a2/>
 </div>
-  <Fragment_ac0b06893fc1b15016f3e0532508036d/>
+  <Fragment_6499b51736be44284c15de43340cb16c/>
 </Fragment>
   <Fragment>
   {isTrue(routeNotFound) ? (

@@ -18,7 +18,8 @@ def footer() -> rx.Component:
                 "  V1.0",
             ),
             href=Route.INDEX.value,
-            font_size=Size.DEFAULT.value
+            font_size=Size.SMALL.value,
+            color=Color.PRIMARY.value,
         ),
         rx.spacer(),
         rx.hstack(

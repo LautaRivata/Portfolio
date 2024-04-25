@@ -21,6 +21,7 @@ def navbar() -> rx.Component:
         rx.mobile_only(nav_menu()),
         rx.tablet_and_desktop(nav_bread()),
         position="sticky",
+        align_items="center",
         bg=Color.CONTENT.value,
         padding_x=Size.BIG.value,
         padding_y=Size.DEFAULT.value,

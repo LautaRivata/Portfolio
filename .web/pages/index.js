@@ -2,7 +2,7 @@
 
 
 import { Fragment, useContext } from "react"
-import { EventLoopContext, StateContexts } from "/utils/context"
+import { EventLoopContext } from "/utils/context"
 import { Event, getBackendURL, isTrue } from "/utils/state"
 import { WifiOffIcon as LucideWifiOffIcon } from "lucide-react"
 import { keyframes } from "@emotion/react"
@@ -10,34 +10,13 @@ import { Avatar as RadixThemesAvatar, Box as RadixThemesBox, Dialog as RadixThem
 import env from "/env.json"
 import Script from "next/script"
 import NextLink from "next/link"
-import { Box, Breadcrumb, BreadcrumbItem, BreadcrumbLink, Menu, MenuButton, MenuItem, MenuList, Text } from "@chakra-ui/react"
+import { Breadcrumb, BreadcrumbItem, BreadcrumbLink, Menu, MenuButton, MenuItem, MenuList, Text } from "@chakra-ui/react"
 import NextHead from "next/head"
 
 
 
-const pulse = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`
-
-
-export function Link_41bb85c5c5d29ae924ff55304f21433d () {
-
-
-  return (
-    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`https://github.com/LautaRivata/`} passHref={true}>
-  <img alt={`GitHub`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/github.svg`}/>
-</NextLink>
-</RadixThemesLink>
-  )
-}
-
 export function Link_85f35b1e68e1b53b9165da2d4888fa13 () {
+
 
 
   return (
@@ -49,20 +28,9 @@ export function Link_85f35b1e68e1b53b9165da2d4888fa13 () {
   )
 }
 
-export function Link_10dba02501660ad418a7a217109dd7a2 () {
-
-
-  return (
-    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
-  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/email.svg`}/>
-</NextLink>
-</RadixThemesLink>
-  )
-}
-
-export function Fragment_ac0b06893fc1b15016f3e0532508036d () {
+export function Fragment_6499b51736be44284c15de43340cb16c () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
+
 
 
   return (
@@ -90,18 +58,52 @@ export function Fragment_ac0b06893fc1b15016f3e0532508036d () {
   )
 }
 
-export function Fragment_966c0378eb9d65bdfb5286644be9b831 () {
+export function Link_10dba02501660ad418a7a217109dd7a2 () {
+
+
+
+  return (
+    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
+  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/email.svg`}/>
+</NextLink>
+</RadixThemesLink>
+  )
+}
+
+const pulse = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
+
+
+export function Link_41bb85c5c5d29ae924ff55304f21433d () {
+
+
+
+  return (
+    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`https://github.com/LautaRivata/`} passHref={true}>
+  <img alt={`GitHub`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/github.svg`}/>
+</NextLink>
+</RadixThemesLink>
+  )
+}
+
+export function Fragment_cb5edf864ed730e6ef1545318d0da5a2 () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
-  const state = useContext(StateContexts.state)
+
 
 
   return (
     <Fragment>
-  {isTrue(((!state.is_hydrated) || (connectErrors.length > 0))) ? (
+  {isTrue(connectErrors.length > 0) ? (
   <Fragment>
-  <LucideWifiOffIcon css={{"color": "crimson", "zIndex": 9999, "position": "fixed", "bottom": "30px", "right": "30px", "animation": `${pulse} 1s infinite`}} size={32}>
-  {`wifi_off`}
-</LucideWifiOffIcon>
+  <LucideWifiOffIcon css={{"color": "crimson", "zIndex": 9999, "position": "fixed", "bottom": "30px", "right": "30px", "animation": `${pulse} 1s infinite`}} size={32}/>
 </Fragment>
 ) : (
   <Fragment/>
@@ -116,15 +118,15 @@ export default function Component() {
     <Fragment>
   <Fragment>
   <div css={{"position": "fixed", "width": "100vw", "height": "0"}}>
-  <Fragment_966c0378eb9d65bdfb5286644be9b831/>
+  <Fragment_cb5edf864ed730e6ef1545318d0da5a2/>
 </div>
-  <Fragment_ac0b06893fc1b15016f3e0532508036d/>
+  <Fragment_6499b51736be44284c15de43340cb16c/>
 </Fragment>
   <RadixThemesBox>
   <Script strategy={`afterInteractive`}>
   {`document.documentElement.lang='es'`}
 </Script>
-  <RadixThemesFlex align={`start`} css={{"position": "sticky", "background": "#212123", "paddingInlineStart": "2em", "paddingInlineEnd": "2em", "paddingTop": "1em", "paddingBottom": "1em", "zIndex": "999", "top": "0"}} direction={`row`} gap={`2`}>
+  <RadixThemesFlex align={`start`} css={{"position": "sticky", "alignItems": "center", "background": "#212123", "paddingInlineStart": "2em", "paddingInlineEnd": "2em", "paddingTop": "1em", "paddingBottom": "1em", "zIndex": "999", "top": "0"}} direction={`row`} gap={`2`}>
   <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}}>
   <NextLink href={`/`} passHref={true}>
   <RadixThemesBox css={{"fontFamily": "Montserrat", "fontWeight": "500", "fontSize": "1.5em"}}>
@@ -138,7 +140,7 @@ export default function Component() {
 </NextLink>
 </RadixThemesLink>
   <RadixThemesFlex css={{"flex": 1, "justifySelf": "stretch", "alignSelf": "stretch"}}/>
-  <Box sx={{"display": ["block", "none", "none", "none"]}}>
+  <RadixThemesBox css={{"@media screen and (min-width: 0)": {"display": "block"}, "@media screen and (min-width: 30em)": {"display": "none"}, "@media screen and (min-width: 48em)": {"display": "none"}, "@media screen and (min-width: 62em)": {"display": "none"}}}>
   <Breadcrumb>
   <Menu sx={{"background": "#212123"}}>
   <MenuButton>
@@ -178,8 +180,8 @@ export default function Component() {
 </MenuList>
 </Menu>
 </Breadcrumb>
-</Box>
-  <Box sx={{"display": ["none", "block", "block", "block"]}}>
+</RadixThemesBox>
+  <RadixThemesBox css={{"@media screen and (min-width: 0)": {"display": "none"}, "@media screen and (min-width: 30em)": {"display": "block"}, "@media screen and (min-width: 48em)": {"display": "block"}, "@media screen and (min-width: 62em)": {"display": "block"}}}>
   <Breadcrumb separator={``} sx={{"color": "#F2F2F2", "fontFamily": "Montserrat", "fontWeight": "500", "fontSize": "1em"}}>
   <BreadcrumbItem>
   <RadixThemesFlex align={`start`} direction={`row`} gap={`2`}>
@@ -206,7 +208,7 @@ export default function Component() {
 </BreadcrumbLink>
 </BreadcrumbItem>
 </Breadcrumb>
-</Box>
+</RadixThemesBox>
 </RadixThemesFlex>
   <RadixThemesFlex css={{"display": "flex", "alignItems": "center", "justifyContent": "center"}}>
   <RadixThemesFlex align={`start`} css={{"maxWidth": "700px", "width": "100%", "minHeight": "80vh", "marginTop": "0px !important", "marginBottom": "0px !important", "padding": "2em", "justifyContent": "center"}} direction={`column`} gap={`2`}>
@@ -263,7 +265,7 @@ export default function Component() {
 </RadixThemesFlex>
   <RadixThemesFlex align={`start`} css={{"color": "#737373", "background": "#212123", "paddingInlineStart": "2em", "paddingInlineEnd": "2em", "paddingTop": "1em", "paddingBottom": "1em", "zIndex": "999"}} direction={`row`} gap={`5`}>
   <RadixThemesFlex css={{"flex": 1, "justifySelf": "stretch", "alignSelf": "stretch"}}/>
-  <RadixThemesLink asChild={true} css={{"fontSize": "1em", "fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}}>
+  <RadixThemesLink asChild={true} css={{"fontSize": "0.5em", "color": "#D93636", "fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}}>
   <NextLink href={`/`} passHref={true}>
   <RadixThemesBox>
   {`©2024 `}
