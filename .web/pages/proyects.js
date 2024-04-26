@@ -17,35 +17,20 @@ import NextHead from "next/head"
 
 
 
-export function Link_41bb85c5c5d29ae924ff55304f21433d () {
+export function Link_10dba02501660ad418a7a217109dd7a2 () {
 
 
 
   return (
     <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`https://github.com/LautaRivata/`} passHref={true}>
-  <img alt={`GitHub`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/github.svg`}/>
+  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
+  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/email.svg`}/>
 </NextLink>
 </RadixThemesLink>
   )
 }
 
-export function Flex_8374f29475a37126b5b1ea01509b4ce9 () {
-
-
-
-  return (
-    <RadixThemesFlex align={`start`} css={{"alignSelf": "end"}} direction={`row`} gap={`2`}>
-  {["Javascript", "React", "MySQL"].map((l, index_92a1e5619c8327442a4ab5cc45a216b7) => (
-  <Badge key={index_92a1e5619c8327442a4ab5cc45a216b7} sx={{"background": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
-  {l}
-</Badge>
-))}
-</RadixThemesFlex>
-  )
-}
-
-export function Flex_6058c45dde71af9dbb42f64853aa19bf () {
+export function Flex_8515d0583ed5f6cf84a58bfd2d3b4edd () {
 
 
 
@@ -60,32 +45,6 @@ export function Flex_6058c45dde71af9dbb42f64853aa19bf () {
   )
 }
 
-export function Link_85f35b1e68e1b53b9165da2d4888fa13 () {
-
-
-
-  return (
-    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`https://www.linkedin.com/in/lautaro-rivata-38b770a1/`} passHref={true}>
-  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/linkedin.svg`}/>
-</NextLink>
-</RadixThemesLink>
-  )
-}
-
-export function Link_10dba02501660ad418a7a217109dd7a2 () {
-
-
-
-  return (
-    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
-  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/email.svg`}/>
-</NextLink>
-</RadixThemesLink>
-  )
-}
-
 const pulse = keyframes`
     0% {
         opacity: 0;
@@ -96,18 +55,16 @@ const pulse = keyframes`
 `
 
 
-export function Flex_d813f130aff2b0f0731f3045481720bf () {
+export function Link_41bb85c5c5d29ae924ff55304f21433d () {
 
 
 
   return (
-    <RadixThemesFlex align={`start`} css={{"alignSelf": "end"}} direction={`row`} gap={`2`}>
-  {["Python", "Django", "MySQL"].map((l, index_92a1e5619c8327442a4ab5cc45a216b7) => (
-  <Badge key={index_92a1e5619c8327442a4ab5cc45a216b7} sx={{"background": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
-  {l}
-</Badge>
-))}
-</RadixThemesFlex>
+    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`https://github.com/LautaRivata/`} passHref={true}>
+  <img alt={`GitHub`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/github.svg`}/>
+</NextLink>
+</RadixThemesLink>
   )
 }
 
@@ -126,6 +83,36 @@ export function Fragment_cb5edf864ed730e6ef1545318d0da5a2 () {
   <Fragment/>
 )}
 </Fragment>
+  )
+}
+
+export function Flex_7db73b2ad37378606b78e1d0fb98f4f4 () {
+
+
+
+  return (
+    <RadixThemesFlex align={`start`} css={{"alignSelf": "end"}} direction={`row`} gap={`2`}>
+  {["Javascript", "React", "MySQL"].map((l, index_92a1e5619c8327442a4ab5cc45a216b7) => (
+  <Badge key={index_92a1e5619c8327442a4ab5cc45a216b7} sx={{"background": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
+  {l}
+</Badge>
+))}
+</RadixThemesFlex>
+  )
+}
+
+export function Flex_35d98d6f538eff9eef577a31a0f8a842 () {
+
+
+
+  return (
+    <RadixThemesFlex align={`start`} css={{"alignSelf": "end"}} direction={`row`} gap={`2`}>
+  {["Python", "Django", "MySQL"].map((l, index_92a1e5619c8327442a4ab5cc45a216b7) => (
+  <Badge key={index_92a1e5619c8327442a4ab5cc45a216b7} sx={{"background": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
+  {l}
+</Badge>
+))}
+</RadixThemesFlex>
   )
 }
 
@@ -156,6 +143,19 @@ export function Fragment_6499b51736be44284c15de43340cb16c () {
   <Fragment/>
 )}
 </Fragment>
+  )
+}
+
+export function Link_85f35b1e68e1b53b9165da2d4888fa13 () {
+
+
+
+  return (
+    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`https://www.linkedin.com/in/lautaro-rivata-38b770a1/`} passHref={true}>
+  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/linkedin.svg`}/>
+</NextLink>
+</RadixThemesLink>
   )
 }
 
@@ -301,7 +301,7 @@ export default function Component() {
                 `}
 </RadixThemesText>
   <img alt={`Imagen de Home del Proyecto Esterimed`} css={{"height": "15em", "aspectRatio": "16 / 9", "alignSelf": "center"}} src={`/ProyectEsterimed/HomeEditado.png`}/>
-  <Flex_d813f130aff2b0f0731f3045481720bf/>
+  <Flex_35d98d6f538eff9eef577a31a0f8a842/>
 </RadixThemesFlex>
   <RadixThemesFlex align={`start`} css={{"width": "100%", "alignItems": "start", "borderRadius": "1em", "backgroundColor": "#212123", "paddingInlineStart": "0.5em", "paddingInlineEnd": "0.5em", "paddingTop": "0.5em", "paddingBottom": "0.5em"}} direction={`column`} gap={`5`}>
   <RadixThemesFlex align={`start`} direction={`row`} gap={`2`}>
@@ -317,7 +317,7 @@ export default function Component() {
                 `}
 </RadixThemesText>
   <img alt={`Imagen de Home del Proyecto Ecomerse`} css={{"height": "15em", "aspectRatio": "16 / 9", "alignSelf": "center"}} src={`/ProyectEcomerse/Index.jpg`}/>
-  <Flex_8374f29475a37126b5b1ea01509b4ce9/>
+  <Flex_7db73b2ad37378606b78e1d0fb98f4f4/>
 </RadixThemesFlex>
   <RadixThemesFlex align={`start`} css={{"width": "100%", "alignItems": "start", "borderRadius": "1em", "backgroundColor": "#212123", "paddingInlineStart": "0.5em", "paddingInlineEnd": "0.5em", "paddingTop": "0.5em", "paddingBottom": "0.5em"}} direction={`column`} gap={`5`}>
   <RadixThemesFlex align={`start`} direction={`row`} gap={`2`}>
@@ -332,7 +332,7 @@ export default function Component() {
                 `}
 </RadixThemesText>
   <img alt={`Imagen de Home del Proyecto Links`} css={{"height": "15em", "aspectRatio": "16 / 9", "alignSelf": "center"}} src={`/ProyectLinks/Home.png`}/>
-  <Flex_6058c45dde71af9dbb42f64853aa19bf/>
+  <Flex_8515d0583ed5f6cf84a58bfd2d3b4edd/>
 </RadixThemesFlex>
 </RadixThemesFlex>
 </RadixThemesFlex>
