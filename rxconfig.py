@@ -7,7 +7,7 @@ import reflex as rx
 config = rx.Config(
     app_name="Portfolio",
     cors_allowed_origins=[
-        "https://bytupakportfolio.vercel.app",
+        "https://bytupakportfolio.vercel.app/",
         "http://localhost:3000",
         "https://rxh-prod-bytupakportfolio.fly.dev",
         "https://bytupakportfolio.reflex.run",
