@@ -17,31 +17,6 @@ import NextHead from "next/head"
 
 
 
-const pulse = keyframes`
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-`
-
-
-export function Flex_435771186c691631d328f18586a18d2a () {
-
-
-
-  return (
-    <RadixThemesFlex align={`start`} css={{"alignSelf": "end"}} direction={`row`} gap={`2`}>
-  {["Python", "Django", "MySQL"].map((l, index_92a1e5619c8327442a4ab5cc45a216b7) => (
-  <Badge key={index_92a1e5619c8327442a4ab5cc45a216b7} sx={{"background": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
-  {l}
-</Badge>
-))}
-</RadixThemesFlex>
-  )
-}
-
 export function Fragment_6499b51736be44284c15de43340cb16c () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
@@ -72,48 +47,25 @@ export function Fragment_6499b51736be44284c15de43340cb16c () {
   )
 }
 
-export function Link_10dba02501660ad418a7a217109dd7a2 () {
+export function Fragment_cb5edf864ed730e6ef1545318d0da5a2 () {
+  const [addEvents, connectErrors] = useContext(EventLoopContext);
 
 
 
   return (
-    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
-  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/email.svg`}/>
-</NextLink>
-</RadixThemesLink>
+    <Fragment>
+  {isTrue(connectErrors.length > 0) ? (
+  <Fragment>
+  <LucideWifiOffIcon css={{"color": "crimson", "zIndex": 9999, "position": "fixed", "bottom": "30px", "right": "30px", "animation": `${pulse} 1s infinite`}} size={32}/>
+</Fragment>
+) : (
+  <Fragment/>
+)}
+</Fragment>
   )
 }
 
-export function Link_41bb85c5c5d29ae924ff55304f21433d () {
-
-
-
-  return (
-    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`https://github.com/LautaRivata/`} passHref={true}>
-  <img alt={`GitHub`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/github.svg`}/>
-</NextLink>
-</RadixThemesLink>
-  )
-}
-
-export function Flex_ffc485e0f4d304392593fc6532b35b0e () {
-
-
-
-  return (
-    <RadixThemesFlex align={`start`} css={{"alignSelf": "end"}} direction={`row`} gap={`2`}>
-  {["Javascript", "React", "MySQL"].map((l, index_92a1e5619c8327442a4ab5cc45a216b7) => (
-  <Badge key={index_92a1e5619c8327442a4ab5cc45a216b7} sx={{"background": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
-  {l}
-</Badge>
-))}
-</RadixThemesFlex>
-  )
-}
-
-export function Flex_3d8d00a88744f61e9cc5d2dca5388dc7 () {
+export function Flex_843488594db4c1154cef74f373923006 () {
 
 
 
@@ -125,6 +77,19 @@ export function Flex_3d8d00a88744f61e9cc5d2dca5388dc7 () {
 </Badge>
 ))}
 </RadixThemesFlex>
+  )
+}
+
+export function Link_10dba02501660ad418a7a217109dd7a2 () {
+
+
+
+  return (
+    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
+  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/email.svg`}/>
+</NextLink>
+</RadixThemesLink>
   )
 }
 
@@ -141,21 +106,56 @@ export function Link_85f35b1e68e1b53b9165da2d4888fa13 () {
   )
 }
 
-export function Fragment_cb5edf864ed730e6ef1545318d0da5a2 () {
-  const [addEvents, connectErrors] = useContext(EventLoopContext);
+export function Flex_aad453a0d91f840e3642ce6da60da0fc () {
 
 
 
   return (
-    <Fragment>
-  {isTrue(connectErrors.length > 0) ? (
-  <Fragment>
-  <LucideWifiOffIcon css={{"color": "crimson", "zIndex": 9999, "position": "fixed", "bottom": "30px", "right": "30px", "animation": `${pulse} 1s infinite`}} size={32}/>
-</Fragment>
-) : (
-  <Fragment/>
-)}
-</Fragment>
+    <RadixThemesFlex align={`start`} css={{"alignSelf": "end"}} direction={`row`} gap={`2`}>
+  {["Python", "Django", "MySQL"].map((l, index_92a1e5619c8327442a4ab5cc45a216b7) => (
+  <Badge key={index_92a1e5619c8327442a4ab5cc45a216b7} sx={{"background": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
+  {l}
+</Badge>
+))}
+</RadixThemesFlex>
+  )
+}
+
+const pulse = keyframes`
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+`
+
+
+export function Link_41bb85c5c5d29ae924ff55304f21433d () {
+
+
+
+  return (
+    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`https://github.com/LautaRivata/`} passHref={true}>
+  <img alt={`GitHub`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/github.svg`}/>
+</NextLink>
+</RadixThemesLink>
+  )
+}
+
+export function Flex_247cafe83a7d3f98a84149ef9744a8a9 () {
+
+
+
+  return (
+    <RadixThemesFlex align={`start`} css={{"alignSelf": "end"}} direction={`row`} gap={`2`}>
+  {["Javascript", "React", "MySQL"].map((l, index_92a1e5619c8327442a4ab5cc45a216b7) => (
+  <Badge key={index_92a1e5619c8327442a4ab5cc45a216b7} sx={{"background": "#D93636", "color": "#A6A6A6", "borderColor": "#D9525E", "borderWidth": 2}} variant={`subtle`}>
+  {l}
+</Badge>
+))}
+</RadixThemesFlex>
   )
 }
 
@@ -301,7 +301,7 @@ export default function Component() {
                 `}
 </RadixThemesText>
   <img alt={`Imagen de Home del Proyecto Esterimed`} css={{"height": "15em", "aspectRatio": "16 / 9", "alignSelf": "center"}} src={`/ProyectEsterimed/HomeEditado.png`}/>
-  <Flex_435771186c691631d328f18586a18d2a/>
+  <Flex_aad453a0d91f840e3642ce6da60da0fc/>
 </RadixThemesFlex>
   <RadixThemesFlex align={`start`} css={{"width": "100%", "alignItems": "start", "borderRadius": "1em", "backgroundColor": "#212123", "paddingInlineStart": "0.5em", "paddingInlineEnd": "0.5em", "paddingTop": "0.5em", "paddingBottom": "0.5em"}} direction={`column`} gap={`5`}>
   <RadixThemesFlex align={`start`} direction={`row`} gap={`2`}>
@@ -317,7 +317,7 @@ export default function Component() {
                 `}
 </RadixThemesText>
   <img alt={`Imagen de Home del Proyecto Ecomerse`} css={{"height": "15em", "aspectRatio": "16 / 9", "alignSelf": "center"}} src={`/ProyectEcomerse/Index.jpg`}/>
-  <Flex_ffc485e0f4d304392593fc6532b35b0e/>
+  <Flex_247cafe83a7d3f98a84149ef9744a8a9/>
 </RadixThemesFlex>
   <RadixThemesFlex align={`start`} css={{"width": "100%", "alignItems": "start", "borderRadius": "1em", "backgroundColor": "#212123", "paddingInlineStart": "0.5em", "paddingInlineEnd": "0.5em", "paddingTop": "0.5em", "paddingBottom": "0.5em"}} direction={`column`} gap={`5`}>
   <RadixThemesFlex align={`start`} direction={`row`} gap={`2`}>
@@ -332,7 +332,7 @@ export default function Component() {
                 `}
 </RadixThemesText>
   <img alt={`Imagen de Home del Proyecto Links`} css={{"height": "15em", "aspectRatio": "16 / 9", "alignSelf": "center"}} src={`/ProyectLinks/Home.png`}/>
-  <Flex_3d8d00a88744f61e9cc5d2dca5388dc7/>
+  <Flex_843488594db4c1154cef74f373923006/>
 </RadixThemesFlex>
 </RadixThemesFlex>
 </RadixThemesFlex>
