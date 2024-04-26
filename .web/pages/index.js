@@ -15,19 +15,6 @@ import NextHead from "next/head"
 
 
 
-export function Link_85f35b1e68e1b53b9165da2d4888fa13 () {
-
-
-
-  return (
-    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`https://www.linkedin.com/in/lautaro-rivata-38b770a1/`} passHref={true}>
-  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/linkedin.svg`}/>
-</NextLink>
-</RadixThemesLink>
-  )
-}
-
 export function Fragment_6499b51736be44284c15de43340cb16c () {
   const [addEvents, connectErrors] = useContext(EventLoopContext);
 
@@ -58,19 +45,6 @@ export function Fragment_6499b51736be44284c15de43340cb16c () {
   )
 }
 
-export function Link_10dba02501660ad418a7a217109dd7a2 () {
-
-
-
-  return (
-    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
-  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/email.svg`}/>
-</NextLink>
-</RadixThemesLink>
-  )
-}
-
 const pulse = keyframes`
     0% {
         opacity: 0;
@@ -81,14 +55,14 @@ const pulse = keyframes`
 `
 
 
-export function Link_41bb85c5c5d29ae924ff55304f21433d () {
+export function Link_85f35b1e68e1b53b9165da2d4888fa13 () {
 
 
 
   return (
     <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
-  <NextLink href={`https://github.com/LautaRivata/`} passHref={true}>
-  <img alt={`GitHub`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/github.svg`}/>
+  <NextLink href={`https://www.linkedin.com/in/lautaro-rivata-38b770a1/`} passHref={true}>
+  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/linkedin.svg`}/>
 </NextLink>
 </RadixThemesLink>
   )
@@ -109,6 +83,32 @@ export function Fragment_cb5edf864ed730e6ef1545318d0da5a2 () {
   <Fragment/>
 )}
 </Fragment>
+  )
+}
+
+export function Link_10dba02501660ad418a7a217109dd7a2 () {
+
+
+
+  return (
+    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`mailto:lautarivata@gmail.com`} passHref={true}>
+  <img alt={`LinkedIn`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/email.svg`}/>
+</NextLink>
+</RadixThemesLink>
+  )
+}
+
+export function Link_41bb85c5c5d29ae924ff55304f21433d () {
+
+
+
+  return (
+    <RadixThemesLink asChild={true} css={{"fontFamily": "Ubuntu", "fontWeight": "300", "textDecoration": "none", "&:hover": null}} target={isTrue(true) ? `_blank` : ``}>
+  <NextLink href={`https://github.com/LautaRivata/`} passHref={true}>
+  <img alt={`GitHub`} css={{"width": "1.5em", "height": "1.5em"}} src={`/icons/github.svg`}/>
+</NextLink>
+</RadixThemesLink>
   )
 }
 
