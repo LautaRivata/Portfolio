@@ -7,13 +7,15 @@ from Portfolio.styles.colors import Color, TextColor
 from Portfolio.styles.fonts import Font, FontWeight
 
 
-def nav_bread() -> rx.Component:
+def nav_bread(icon_display: bool = False) -> rx.Component:
     return rx.chakra.breadcrumb(
         nav_item("My Perfil", "/icons/user-regular.svg",
-                 Route.MYPROFILE.value),
-        nav_item("Proyectos", "/icons/code.svg", Route.PROYECTS.value),
-        nav_item("Contacto", "/icons/email.svg", Route.CONTACT.value),
-        separator="",
+                 Route.MYPROFILE.value, icon_display),
+        nav_item("Proyectos", "/icons/code.svg",
+                 Route.PROYECTS.value, icon_display),
+        nav_item("Contacto", "/icons/email.svg",
+                 Route.CONTACT.value, icon_display),
+        separator="|",
         color=TextColor.HEADER.value,
         font_family=Font.LOGO.value,
         font_weight=FontWeight.MEDIUM.value,

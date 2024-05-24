@@ -1,7 +1,7 @@
 import reflex as rx
 import datetime
 import Portfolio.constants as const
-from Portfolio.components.link_icon import link_icon
+from Portfolio.components.footer_icon import footer_icon
 from Portfolio.routes import Route
 from Portfolio.styles.styles import Size, SizeRadix
 from Portfolio.styles.colors import Color, TextColor
@@ -18,27 +18,28 @@ def footer() -> rx.Component:
                 "  V1.0",
             ),
             href=Route.INDEX.value,
-            font_size=Size.SMALL.value,
+            font_size=Size.FOOTER.value,
             color=Color.PRIMARY.value,
+            text_align="center"
         ),
         rx.spacer(),
         rx.hstack(
-            link_icon(
+            footer_icon(
                 "/icons/github.svg",
                 const.GITHUB_URL,
                 "GitHub"
             ),
-            link_icon(
+            footer_icon(
                 "/icons/linkedin.svg",
                 const.LINKEDIN_URL,
                 "LinkedIn"
             ),
-            link_icon(
+            footer_icon(
                 "/icons/email.svg",
                 f"mailto:{const.EMAIL}",
                 "LinkedIn"
             ),
-            spacing=SizeRadix.LARGE.value
+            spacing=SizeRadix.DEFAULT.value
         ),
         rx.spacer(),
         spacing=SizeRadix.DEFAULT.value,

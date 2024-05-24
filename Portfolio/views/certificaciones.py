@@ -55,7 +55,7 @@ def certificaciones() -> rx.Component:
                     ),
                     rx.chakra.modal_footer(
                         rx.button(
-                            "Cerar",
+                            "Cerrar",
                             on_click=Modaltitulo.change,
                         )
                     ),
@@ -74,7 +74,7 @@ def certificaciones() -> rx.Component:
                     ),
                     rx.chakra.modal_footer(
                         rx.button(
-                            "Cerar",
+                            "Cerrar",
                             on_click=ModalDiplo.change,
                         )
                     ),
@@ -93,7 +93,7 @@ def certificaciones() -> rx.Component:
                     ),
                     rx.chakra.modal_footer(
                         rx.button(
-                            "Cerar",
+                            "Cerrar",
                             on_click=ModalQAA.change,
                         )
                     ),

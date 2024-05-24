@@ -19,7 +19,7 @@ def navbar() -> rx.Component:
         ),
         rx.spacer(),
         rx.mobile_only(nav_menu()),
-        rx.tablet_and_desktop(nav_bread()),
+        rx.tablet_and_desktop(nav_bread(icon_display=False)),
         position="sticky",
         align_items="center",
         bg=Color.CONTENT.value,

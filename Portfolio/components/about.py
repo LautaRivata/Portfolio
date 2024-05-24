@@ -12,7 +12,7 @@ def about() -> rx.Component:
         rx.text(
             f"""
             Soy Ingeniero Biomédico con diplomatura en desarrollo WEB 
-            full-stack.
+            full-stack. 
             Bienvenid@ a mi portfolio.
             """,
             font_size=Size.DEFAULT.value,

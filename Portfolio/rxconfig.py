@@ -11,6 +11,6 @@ config = rx.Config(
         "http://localhost:3000",
         "https://rxh-prod-bytupakportfolio.fly.dev",
         "https://bytupakportfolio.reflex.run",
-    ]
-    # api_url="https://bytupakportfolio.up.railway.app/"
+    ],
+    # api_url="https://bytupakportfolio.up.railway.app"
 )
