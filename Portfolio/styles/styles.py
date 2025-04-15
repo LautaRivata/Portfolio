@@ -100,7 +100,7 @@ button_body_style = dict(
 )
 
 menu_style = dict(
-    color=TextColor.HEADER.value,
+    color=Color.PRIMARY.value,
     font_family=Font.LOGO.value,
     font_weight=FontWeight.MEDIUM.value,
     font_size=Size.DEFAULT.value,

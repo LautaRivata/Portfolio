@@ -5,10 +5,11 @@ from Portfolio.styles.colors import Color, TextColor
 
 def info_text(title: str, body: str) -> rx.Component:
     return rx.box(
-        rx.chakra.span(
+        rx.text(
             title,
             font_weight="bold",
-            color=Color.PRIMARY.value
+            color=Color.PRIMARY.value,
+            as_="span"
         ),
         f" {body}",
         font_size=Size.MEDIUM.value,

@@ -8,32 +8,27 @@ from Portfolio.styles.fonts import Font, FontWeight
 
 
 def nav_menu() -> rx.Component:
-    return rx.chakra.breadcrumb(
-        rx.chakra.menu(
-            rx.chakra.menu_button(
-                rx.image(
-                    src="/icons/bars-solid.svg",
-                    width=Size.DEFAULT.value,
-                    height=Size.DEFAULT.value,
-                    alt="Icono Menu"
-                ),
+    return rx.vstack(
+        rx.menu.root(
+            rx.menu.trigger(
+                rx.icon("square-menu", size=25, color=Color.PRIMARY.value),
             ),
-            rx.chakra.menu_list(
-                rx.chakra.menu_item(
+            rx.menu.content(
+                rx.menu.item(
                     nav_item("My Perfil", "/icons/user-regular.svg",
                              Route.MYPROFILE.value),
                     style=styles.menu_style
                 ),
-                rx.chakra.menu_item(
+                rx.menu.item(
                     nav_item("Proyectos", "/icons/code.svg",
                              Route.PROYECTS.value),
                     style=styles.menu_style
                 ),
-                rx.chakra.menu_item(
+                rx.menu.item(
                     nav_item("Contacto", "/icons/email.svg",
                              Route.CONTACT.value),
                     style=styles.menu_style
-                ),
-            ),
-            bg=Color.CONTENT.value
-        ))
+                )
+            )
+        ),
+    )

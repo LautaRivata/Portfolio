@@ -1,27 +1,28 @@
 import { createContext, useContext, useMemo, useReducer, useState } from "react"
-import { applyDelta, Event, hydrateClientStorage, useEventLoop, refs } from "/utils/state.js"
+import { applyDelta, Event, hydrateClientStorage, useEventLoop, refs } from "$/utils/state.js"
 
-export const initialState = {"state": {"is_hydrated": false, "router": {"session": {"client_token": "", "client_ip": "", "session_id": ""}, "headers": {"host": "", "origin": "", "upgrade": "", "connection": "", "pragma": "", "cache_control": "", "user_agent": "", "sec_websocket_version": "", "sec_websocket_key": "", "sec_websocket_extensions": "", "accept_encoding": "", "accept_language": ""}, "page": {"host": "", "path": "", "raw_path": "", "full_path": "", "full_raw_path": "", "params": {}}}}, "state.modal_diplo": {"show": false}, "state.modaltitulo": {"show": false}, "state.update_vars_internal_state": {}, "state.state": {}, "state.modal_qaa": {"show": false}, "state.on_load_internal_state": {}}
+export const initialState = {"reflex___state____state": {"is_hydrated": false, "router": {"session": {"client_token": "", "client_ip": "", "session_id": ""}, "headers": {"host": "", "origin": "", "upgrade": "", "connection": "", "cookie": "", "pragma": "", "cache_control": "", "user_agent": "", "sec_websocket_version": "", "sec_websocket_key": "", "sec_websocket_extensions": "", "accept_encoding": "", "accept_language": "", "raw_headers": {}}, "page": {"host": "", "path": "", "raw_path": "", "full_path": "", "full_raw_path": "", "params": {}}}}, "reflex___state____state.reflex___state____on_load_internal_state": {}, "reflex___state____state.reflex___state____frontend_event_exception_state": {}, "reflex___state____state.portfolio____portfolio____state": {}, "reflex___state____state.portfolio___views___certificaciones____modal_qaa": {"show": false}, "reflex___state____state.reflex___state____update_vars_internal_state": {}}
 
-export const defaultColorMode = "light"
+export const defaultColorMode = "system"
 export const ColorModeContext = createContext(null);
 export const UploadFilesContext = createContext(null);
 export const DispatchContext = createContext(null);
 export const StateContexts = {
-  state: createContext(null),
-  state__modal_diplo: createContext(null),
-  state__modaltitulo: createContext(null),
-  state__update_vars_internal_state: createContext(null),
-  state__state: createContext(null),
-  state__modal_qaa: createContext(null),
-  state__on_load_internal_state: createContext(null),
+  reflex___state____state: createContext(null),
+  reflex___state____state__reflex___state____on_load_internal_state: createContext(null),
+  reflex___state____state__reflex___state____frontend_event_exception_state: createContext(null),
+  reflex___state____state__portfolio____portfolio____state: createContext(null),
+  reflex___state____state__portfolio___views___certificaciones____modal_qaa: createContext(null),
+  reflex___state____state__reflex___state____update_vars_internal_state: createContext(null),
 }
 export const EventLoopContext = createContext(null);
-export const clientStorage = {"cookies": {}, "local_storage": {}}
+export const clientStorage = {"cookies": {}, "local_storage": {}, "session_storage": {}}
 
-export const state_name = "state"
+export const state_name = "reflex___state____state"
 
-// Theses events are triggered on initial load and each page navigation.
+export const exception_state_name = "reflex___state____state.reflex___state____frontend_event_exception_state"
+
+// These events are triggered on initial load and each page navigation.
 export const onLoadInternalEvent = () => {
     const internal_events = [];
 
@@ -31,7 +32,7 @@ export const onLoadInternalEvent = () => {
     if (client_storage_vars && Object.keys(client_storage_vars).length !== 0) {
         internal_events.push(
             Event(
-                'state.update_vars_internal_state.update_vars_internal',
+                'reflex___state____state.reflex___state____update_vars_internal_state.update_vars_internal',
                 {vars: client_storage_vars},
             ),
         );
@@ -39,18 +40,20 @@ export const onLoadInternalEvent = () => {
 
     // `on_load_internal` triggers the correct on_load event(s) for the current page.
     // If the page does not define any on_load event, this will just set `is_hydrated = true`.
-    internal_events.push(Event('state.on_load_internal_state.on_load_internal'));
+    internal_events.push(Event('reflex___state____state.reflex___state____on_load_internal_state.on_load_internal'));
 
     return internal_events;
 }
 
 // The following events are sent when the websocket connects or reconnects.
 export const initialEvents = () => [
-    Event('state.hydrate'),
+    Event('reflex___state____state.hydrate'),
     ...onLoadInternalEvent()
 ]
 
 export const isDevMode = true
+
+export const lastCompiledTimeStamp = "2025-04-11 10:56:17.805278"
 
 export function UploadFilesProvider({ children }) {
   const [filesById, setFilesById] = useState({})
@@ -60,9 +63,9 @@ export function UploadFilesProvider({ children }) {
     return newFilesById
   })
   return (
-    <UploadFilesContext.Provider value={[filesById, setFilesById]}>
+    <UploadFilesContext value={[filesById, setFilesById]}>
       {children}
-    </UploadFilesContext.Provider>
+    </UploadFilesContext>
   )
 }
 
@@ -74,49 +77,45 @@ export function EventLoopProvider({ children }) {
     clientStorage,
   )
   return (
-    <EventLoopContext.Provider value={[addEvents, connectErrors]}>
+    <EventLoopContext value={[addEvents, connectErrors]}>
       {children}
-    </EventLoopContext.Provider>
+    </EventLoopContext>
   )
 }
 
 export function StateProvider({ children }) {
-  const [state, dispatch_state] = useReducer(applyDelta, initialState["state"])
-  const [state__modal_diplo, dispatch_state__modal_diplo] = useReducer(applyDelta, initialState["state.modal_diplo"])
-  const [state__modaltitulo, dispatch_state__modaltitulo] = useReducer(applyDelta, initialState["state.modaltitulo"])
-  const [state__update_vars_internal_state, dispatch_state__update_vars_internal_state] = useReducer(applyDelta, initialState["state.update_vars_internal_state"])
-  const [state__state, dispatch_state__state] = useReducer(applyDelta, initialState["state.state"])
-  const [state__modal_qaa, dispatch_state__modal_qaa] = useReducer(applyDelta, initialState["state.modal_qaa"])
-  const [state__on_load_internal_state, dispatch_state__on_load_internal_state] = useReducer(applyDelta, initialState["state.on_load_internal_state"])
+  const [reflex___state____state, dispatch_reflex___state____state] = useReducer(applyDelta, initialState["reflex___state____state"])
+  const [reflex___state____state__reflex___state____on_load_internal_state, dispatch_reflex___state____state__reflex___state____on_load_internal_state] = useReducer(applyDelta, initialState["reflex___state____state.reflex___state____on_load_internal_state"])
+  const [reflex___state____state__reflex___state____frontend_event_exception_state, dispatch_reflex___state____state__reflex___state____frontend_event_exception_state] = useReducer(applyDelta, initialState["reflex___state____state.reflex___state____frontend_event_exception_state"])
+  const [reflex___state____state__portfolio____portfolio____state, dispatch_reflex___state____state__portfolio____portfolio____state] = useReducer(applyDelta, initialState["reflex___state____state.portfolio____portfolio____state"])
+  const [reflex___state____state__portfolio___views___certificaciones____modal_qaa, dispatch_reflex___state____state__portfolio___views___certificaciones____modal_qaa] = useReducer(applyDelta, initialState["reflex___state____state.portfolio___views___certificaciones____modal_qaa"])
+  const [reflex___state____state__reflex___state____update_vars_internal_state, dispatch_reflex___state____state__reflex___state____update_vars_internal_state] = useReducer(applyDelta, initialState["reflex___state____state.reflex___state____update_vars_internal_state"])
   const dispatchers = useMemo(() => {
     return {
-      "state": dispatch_state,
-      "state.modal_diplo": dispatch_state__modal_diplo,
-      "state.modaltitulo": dispatch_state__modaltitulo,
-      "state.update_vars_internal_state": dispatch_state__update_vars_internal_state,
-      "state.state": dispatch_state__state,
-      "state.modal_qaa": dispatch_state__modal_qaa,
-      "state.on_load_internal_state": dispatch_state__on_load_internal_state,
+      "reflex___state____state": dispatch_reflex___state____state,
+      "reflex___state____state.reflex___state____on_load_internal_state": dispatch_reflex___state____state__reflex___state____on_load_internal_state,
+      "reflex___state____state.reflex___state____frontend_event_exception_state": dispatch_reflex___state____state__reflex___state____frontend_event_exception_state,
+      "reflex___state____state.portfolio____portfolio____state": dispatch_reflex___state____state__portfolio____portfolio____state,
+      "reflex___state____state.portfolio___views___certificaciones____modal_qaa": dispatch_reflex___state____state__portfolio___views___certificaciones____modal_qaa,
+      "reflex___state____state.reflex___state____update_vars_internal_state": dispatch_reflex___state____state__reflex___state____update_vars_internal_state,
     }
   }, [])
 
   return (
-    <StateContexts.state.Provider value={ state }>
-    <StateContexts.state__modal_diplo.Provider value={ state__modal_diplo }>
-    <StateContexts.state__modaltitulo.Provider value={ state__modaltitulo }>
-    <StateContexts.state__update_vars_internal_state.Provider value={ state__update_vars_internal_state }>
-    <StateContexts.state__state.Provider value={ state__state }>
-    <StateContexts.state__modal_qaa.Provider value={ state__modal_qaa }>
-    <StateContexts.state__on_load_internal_state.Provider value={ state__on_load_internal_state }>
-      <DispatchContext.Provider value={dispatchers}>
+    <StateContexts.reflex___state____state value={ reflex___state____state }>
+    <StateContexts.reflex___state____state__reflex___state____on_load_internal_state value={ reflex___state____state__reflex___state____on_load_internal_state }>
+    <StateContexts.reflex___state____state__reflex___state____frontend_event_exception_state value={ reflex___state____state__reflex___state____frontend_event_exception_state }>
+    <StateContexts.reflex___state____state__portfolio____portfolio____state value={ reflex___state____state__portfolio____portfolio____state }>
+    <StateContexts.reflex___state____state__portfolio___views___certificaciones____modal_qaa value={ reflex___state____state__portfolio___views___certificaciones____modal_qaa }>
+    <StateContexts.reflex___state____state__reflex___state____update_vars_internal_state value={ reflex___state____state__reflex___state____update_vars_internal_state }>
+      <DispatchContext value={dispatchers}>
         {children}
-      </DispatchContext.Provider>
-    </StateContexts.state__on_load_internal_state.Provider>
-    </StateContexts.state__modal_qaa.Provider>
-    </StateContexts.state__state.Provider>
-    </StateContexts.state__update_vars_internal_state.Provider>
-    </StateContexts.state__modaltitulo.Provider>
-    </StateContexts.state__modal_diplo.Provider>
-    </StateContexts.state.Provider>
+      </DispatchContext>
+    </StateContexts.reflex___state____state__reflex___state____update_vars_internal_state>
+    </StateContexts.reflex___state____state__portfolio___views___certificaciones____modal_qaa>
+    </StateContexts.reflex___state____state__portfolio____portfolio____state>
+    </StateContexts.reflex___state____state__reflex___state____frontend_event_exception_state>
+    </StateContexts.reflex___state____state__reflex___state____on_load_internal_state>
+    </StateContexts.reflex___state____state>
   )
 }

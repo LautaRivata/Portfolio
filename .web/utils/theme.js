@@ -1,1 +1,1 @@
-export default {"styles": {"global": {":root": {}, "body": {"fontFamily": "Ubuntu", "fontWeight": "300", "backgroundColor": "#0D0D0D"}}}}
+export default ({ ["styles"] : ({ ["global"] : ({ [":root"] : ({  }), ["body"] : ({ ["fontFamily"] : "Ubuntu", ["--default-font-family"] : "Ubuntu", ["fontWeight"] : "300", ["backgroundColor"] : "#0D0D0D" }) }) }) })

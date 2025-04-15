@@ -10,7 +10,7 @@ config = rx.Config(
         "https://bytupakportfolio.vercel.app",
         "http://localhost:3000",
         "https://rxh-prod-bytupakportfolio.fly.dev",
-        "https://bytupakportfolio.reflex.run",
+        "https://portfolio-gold-orca.reflex.run",
     ],
     # api_url="https://bytupakportfolio.up.railway.app"
 )

@@ -11,9 +11,11 @@ def about() -> rx.Component:
     return rx.vstack(
         rx.text(
             f"""
-            Soy Ingeniero Biomédico con diplomatura en desarrollo WEB 
-            full-stack. 
-            Bienvenid@ a mi portfolio.
+                Soy Ingeniero Biomédico con un perfil técnico. 
+                Mi formación y experiencia me han permitido desarrollar habilidades en gestión,
+                control de calidad, validación y trazabilidad de procesos.
+                Además, complemento mi perfil con una diplomatura en desarrollo web, 
+                ampliando mi enfoque para la integración de la tecnología en mis proyectos.
             """,
             font_size=Size.DEFAULT.value,
             color=TextColor.BODY.value

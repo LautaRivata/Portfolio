@@ -13,9 +13,9 @@ def footer() -> rx.Component:
         rx.link(
             rx.box(
                 f"©{datetime.date.today().year} ",
-                rx.chakra.span("ByTupak de Lautaro Rivata",
-                               color=Color.PRIMARY.value),
-                "  V1.0",
+                rx.text("ByTupak de Lautaro Rivata",
+                        color=Color.PRIMARY.value, as_="span"),
+                "  V1",
             ),
             href=Route.INDEX.value,
             font_size=Size.FOOTER.value,

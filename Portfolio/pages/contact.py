@@ -7,7 +7,7 @@ from Portfolio.views.index_links import index_links
 from Portfolio.views.header import header
 from Portfolio.views.footer import footer
 from Portfolio.components.title import title
-from Portfolio.views.contacto import contacto
+from Portfolio.views.contacto import contacto, contacto2, contacto3
 from Portfolio.styles.styles import Size, SizeRadix
 
 
@@ -26,8 +26,7 @@ def contact() -> rx.Component:
             rx.vstack(
                 header("8"),
                 title("Contacto"),
-                contacto(),
-                title("Otros Contactos"),
+                contacto3(),
                 index_links(),
                 max_width=styles.MAX_WIDTH,
                 width="100%",

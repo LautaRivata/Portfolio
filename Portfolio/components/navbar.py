@@ -1,7 +1,7 @@
 import reflex as rx
 import Portfolio.styles.styles as styles
 from Portfolio.routes import Route
-from Portfolio.components.nav_bread import nav_bread
+from Portfolio.components.nav_seg_control import nav_seg_control
 from Portfolio.components.nav_menu import nav_menu
 from Portfolio.styles.styles import Size
 from Portfolio.styles.colors import Color
@@ -11,15 +11,15 @@ def navbar() -> rx.Component:
     return rx.hstack(
         rx.link(
             rx.box(
-                rx.chakra.span("By", color=Color.PRIMARY.value),
-                rx.chakra.span("Tupak", color=Color.SECONDARY.value),
+                rx.text("By", color=Color.PRIMARY.value, as_="span"),
+                rx.text("Tupak", color=Color.SECONDARY.value, as_="span"),
                 style=styles.navbar_title_style
             ),
             href=Route.INDEX.value
         ),
         rx.spacer(),
         rx.mobile_only(nav_menu()),
-        rx.tablet_and_desktop(nav_bread(icon_display=False)),
+        rx.tablet_and_desktop(nav_seg_control()),
         position="sticky",
         align_items="center",
         bg=Color.CONTENT.value,

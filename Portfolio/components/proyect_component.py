@@ -37,7 +37,7 @@ def proyect_component(name: str, body: str, languaje: list, imagen: str, alt: st
             align_self="center",
         ),
         rx.hstack(
-            rx.foreach(languaje, lambda l: rx.chakra.badge(l, variant="subtle", bg=Color.PRIMARY.value,
+            rx.foreach(languaje, lambda l: rx.badge(l, variant="surface", bg=Color.PRIMARY.value,
                        color=TextColor.BODY.value, border_color=Color.SECONDARY.value, border_width=2,)),
             align_self="end",
         ),

@@ -1,7 +1,7 @@
 import reflex as rx
 import datetime
 import Portfolio.constants as const
-from Portfolio.styles.styles import Size, Font, navbar_title_style, SizeRadix
+from Portfolio.styles.styles import Size, navbar_title_style, SizeRadix
 from Portfolio.styles.colors import Color, TextColor
 from Portfolio.components.link_icon import link_icon
 
@@ -28,8 +28,8 @@ def header(size: str) -> rx.Component:
                     margin=Size.ZERO.value
                 ),
                 rx.text(
-                    rx.chakra.span("@By", color=Color.PRIMARY.value),
-                    rx.chakra.span("Tupak", color=Color.SECONDARY.value),
+                    rx.text("@By", color=Color.PRIMARY.value, as_="span"),
+                    rx.text("Tupak", color=Color.SECONDARY.value, as_="span"),
                     style=navbar_title_style,
                 ),
                 rx.hstack(

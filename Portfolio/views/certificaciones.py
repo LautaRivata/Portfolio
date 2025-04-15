@@ -3,20 +3,6 @@ from Portfolio.styles.styles import button_type_style, SizeRadix
 from Portfolio.components.action_button import action_button
 
 
-class Modaltitulo(rx.State):
-    show: bool = False
-
-    def change(self):
-        self.show = not (self.show)
-
-
-class ModalDiplo(rx.State):
-    show: bool = False
-
-    def change(self):
-        self.show = not (self.show)
-
-
 class ModalQAA(rx.State):
     show: bool = False
 
@@ -26,80 +12,74 @@ class ModalQAA(rx.State):
 
 def certificaciones() -> rx.Component:
     return rx.vstack(
-        action_button(
-            "Ingeniero Biomedico",
-            "Universidad Nacional de Cordoba FCEFyN",
-            "/icons/graduation-cap-solid.svg",
-            Modaltitulo.change,
-        ),
-        action_button(
-            "Desarrollo WEB Full Stack",
-            "Icaro Organizacion",
-            "/icons/graduation-cap-solid.svg",
-            ModalDiplo.change,
-        ),
-        action_button(
-            "Tester QA Automation",
-            "Icaro Organizacion",
-            "/icons/graduation-cap-solid.svg",
-            ModalQAA.change,
-        ),
-        rx.chakra.modal(
-            rx.chakra.modal_overlay(
-                rx.chakra.modal_content(
-                    rx.chakra.modal_header("Ingeniero Biomedico"),
-                    rx.chakra.modal_body(
-                        rx.image(
-                            src="/CertificadoIngBio.jpg",
-                        )
-                    ),
-                    rx.chakra.modal_footer(
-                        rx.button(
-                            "Cerrar",
-                            on_click=Modaltitulo.change,
-                        )
-                    ),
-                )
+        rx.alert_dialog.root(
+            rx.alert_dialog.trigger(
+                action_button(
+                    "Ingeniero Biomedico",
+                    "Universidad Nacional de Cordoba FCEFyN",
+                    "/icons/graduation-cap-solid.svg",
+                    ModalQAA.change,
+                ),
+                width="100%",
             ),
-            is_open=Modaltitulo.show,
-        ),
-        rx.chakra.modal(
-            rx.chakra.modal_overlay(
-                rx.chakra.modal_content(
-                    rx.chakra.modal_header("Diplo Web Full Stack"),
-                    rx.chakra.modal_body(
-                        rx.image(
-                            src="/CertificadoDiploWeb.jpg",
-                        )
-                    ),
-                    rx.chakra.modal_footer(
-                        rx.button(
-                            "Cerrar",
-                            on_click=ModalDiplo.change,
-                        )
-                    ),
-                )
+            rx.alert_dialog.content(
+                rx.alert_dialog.title("Ingeniero Biomedico"),
+                rx.inset(
+                    rx.container(
+                        rx.image(src="/CertificadoIngBio.jpg",
+                                 object_fit="contain"),
+                    )
+                ),
+                rx.alert_dialog.cancel(
+                    rx.button("Cerrar"),
+                ),
             ),
-            is_open=ModalDiplo.show,
         ),
-        rx.chakra.modal(
-            rx.chakra.modal_overlay(
-                rx.chakra.modal_content(
-                    rx.chakra.modal_header("Tester QAA"),
-                    rx.chakra.modal_body(
-                        rx.image(
-                            src="/TesterQAACertificado.jpg",
-                        )
-                    ),
-                    rx.chakra.modal_footer(
-                        rx.button(
-                            "Cerrar",
-                            on_click=ModalQAA.change,
-                        )
-                    ),
-                )
+        rx.alert_dialog.root(
+            rx.alert_dialog.trigger(
+                action_button(
+                    "Desarrollo WEB Full Stack",
+                    "Icaro Organizacion",
+                    "/icons/graduation-cap-solid.svg",
+                    ModalQAA.change,
+                ),
+                width="100%",
             ),
-            is_open=ModalQAA.show,
+            rx.alert_dialog.content(
+                rx.alert_dialog.title("Diplo Web Full Stack"),
+                rx.inset(
+                    rx.container(
+                        rx.image(src="/CertificadoDiploWeb.jpg",
+                                 object_fit="contain"),
+                    ),
+                ),
+                rx.alert_dialog.cancel(
+                    rx.button("Cerrar"),
+                ),
+            ),
+        ),
+        rx.alert_dialog.root(
+            rx.alert_dialog.trigger(
+                action_button(
+                    "Tester QA Automation",
+                    "Icaro Organizacion",
+                    "/icons/graduation-cap-solid.svg",
+                    ModalQAA.change,
+                ),
+                width="100%",
+            ),
+            rx.alert_dialog.content(
+                rx.alert_dialog.title("Tester QAA"),
+                rx.inset(
+                    rx.container(
+                        rx.image(src="/TesterQAACertificado.jpg",
+                                 object_fit="contain"),
+                    )
+                ),
+                rx.alert_dialog.cancel(
+                    rx.button("Cerrar"),
+                ),
+            ),
         ),
         spacing=SizeRadix.MEDIUM.value,
         width="100%",

@@ -36,7 +36,7 @@ def my_profile() -> rx.Component:
                     "Aquí puedes descargar mi Curriculum Vitae",
                     "/icons/file-regular.svg",
                     action=rx.download(
-                        url="/2024 - Lautaro Rivata FullStack.pdf",
+                        url="/2025 - Rivata Lautaro ing Biomedico.pdf",
                         filename="Lautaro Rivata FullStack.pdf",
                     ),
                 ),
